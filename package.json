@@ -18,7 +18,7 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
-  "homepage": "https://Sridhar0435.github.io/cricreact",
+  "homepage": "https://Sridhar0435.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
