@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cric2react/precache-manifest.1e1dcb76dc6a52a788d505083af8e3c4.js"
+  "/cric2react/precache-manifest.17d74815fa56d16491e7d65c99a2fdb1.js"
 );
 
 self.addEventListener('message', (event) => {

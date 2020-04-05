@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "043b090440bb9cdee7f3a329d6210659",
+    "revision": "27b1e2b728fb6942fb8158dfa8185782",
     "url": "/cric2react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cric2react/static/css/2.bf6a9016.chunk.css"
   },
   {
-    "revision": "aacd02b8afe690d54f2b",
+    "revision": "fea999f9cf46c2a8fd0c",
     "url": "/cric2react/static/css/main.22c14ce6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cric2react/static/js/2.fd20253c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "aacd02b8afe690d54f2b",
-    "url": "/cric2react/static/js/main.6d773a80.chunk.js"
+    "revision": "fea999f9cf46c2a8fd0c",
+    "url": "/cric2react/static/js/main.587321bd.chunk.js"
   },
   {
     "revision": "d67109bbb17a2738b172",
