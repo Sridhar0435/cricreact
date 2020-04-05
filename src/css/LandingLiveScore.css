@@ -1,0 +1,120 @@
+h1{
+    color: red;
+}
+.td-box{
+    /* width: 20%; */
+    padding: 3px;
+    background: khaki;
+    border-radius: 3px;
+    box-shadow: 0px 2px 6px 1px khaki;
+    border-right: 2px solid silver;
+    cursor: pointer;
+}
+.td-box .row{
+   margin-bottom: 5px;
+}
+.card{
+    /* width: 21%!important;
+    height: 21vh!important; */
+    padding: 0 24px;
+    margin: 0;
+    border-radius: 0;
+}
+.card-title{
+    margin-left: 11px;
+    font-weight: bolder!important;
+    font-size: 14px!important;
+    margin-bottom: 0!important;
+}
+.card-content.card-top-hori{
+    color: #333;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.card-content.card-top-hori:hover{
+    color: #fff;
+    /* transition-duration: .10s;
+    transition-timing-function: ease-in-out; */
+}
+.card-content.card-top-hori .col.s4{
+    white-space: nowrap;
+}
+.card .card-content.card-top-hori{
+    padding: 0 !important;
+}
+.row.score-flex-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    transition: 2s;
+    transition-timing-function: ease;
+    border: 1px solid #e6e6e6;
+    border-top: 0;
+
+}
+.card-content.card-top-hori .row{
+    margin-bottom: 6px;
+}
+.leftArrow{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    color: gray;
+    left: 7px;
+    top: 73px;
+    cursor: pointer;
+}
+.rightArrow{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    color: gray;
+    top:73px;
+    right: 7px;
+    cursor: pointer;
+}
+.blue-grey.darken-1{
+    background-color: #fff!important;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.blue-grey.darken-1:hover{
+    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+    cursor: pointer;
+   
+}
+/* width */
+.row.score-flex-row::-webkit-scrollbar {
+    background: #333;
+    width: 15px;
+    height: 4px; 
+  }
+  
+  /* Track */
+  .row.score-flex-row::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 30px #6cd297;
+  }
+   
+  /* Handle */
+  .row.score-flex-row::-webkit-scrollbar-thumb {
+    background: #fff; 
+    border-radius: 5px;
+    display: none; 
+  }
+  
+  /* Handle on hover */
+  .row.score-flex-row::-webkit-scrollbar-thumb:hover {
+    background: #6cd297 ; 
+  }
+
+  @media screen and (max-width:768px){
+      .leftArrow, .rightArrow{
+          display: none;
+      }
+      .row.score-flex-row .card.blue-grey.darken-1{
+        padding-left: 7px;
+      }
+  }

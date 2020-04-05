@@ -1,0 +1,64 @@
+.articleCommentary{
+    background: #fff;
+    padding: 10px;
+    margin: 14px 0;
+    border: 1px solid #e6e6e6;
+}
+.commCard{
+    padding: 10px!important;
+    margin: 16px 2px;
+}
+.commCard .card-content.boxcolor:hover{
+    color: #fff;
+}
+.commCard .boxcolor .hor_com{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.com4w{
+    display: flex;
+    flex-direction: column;
+}
+.com4w .span1_com4w{
+    background: #fff;
+    width: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 3px;
+}
+.com4w .span2_com4w{
+    font-weight: 700;
+}
+.comContent{
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.selectTeam{
+    display: block;
+    cursor: pointer;
+}
+.selectTeam option{
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #5fcd94;
+}
+.oversum{
+    font-size: 20px;
+    margin-left: 2px;
+    border-top: 1px solid silver;
+    padding-top: 13px;
+}
+.rowFilter{
+    display: flex;
+    align-items: center;
+    /* border-bottom: 1px solid silver; */
+
+}
+.rowFilter .col{
+    margin-left: 0!important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}

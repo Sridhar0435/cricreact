@@ -1,0 +1,79 @@
+.header {
+    height: 0.5vh;
+    background: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+}
+.scrollmenu{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    overflow-x: auto;
+}
+
+.scrollmenu .li-mainNav .titlink{
+    white-space: nowrap;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+.nav-wrapper.grey.darken-3{
+    height: 42px!important;
+    line-height: 40px!important;
+    border-bottom: 2px solid #fff;
+    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+}
+.scrollmenu .li-mainNav:nth-child(8){
+    margin-left: 340px;
+}
+.scrollmenu .li-mainNav .titlink i{
+    display: initial;
+}
+
+.dropdown{
+    width: 84px;
+}
+.dropdown .titlink{
+    transition: .2s;
+}
+.sub_nav{
+    background: mintcream;
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+    box-shadow: 1px 0px 8px 0px silver;
+    display: none;
+}
+.dropdown .sub_nav .sub-ul-drop{
+    position: relative;
+    z-index: 1;
+    /* display: grid;
+    grid-template-columns: 200px 200px; */
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+    padding: 10px;
+    border: 2px solid #f2f2f2;
+}
+
+.dropdown:hover .sub_nav{
+    display: inherit;
+}
+.dropdown .sub_nav .sub-ul-drop .sub-a-drop{
+    color: #333;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: initial;
+}
+.sub-a-drop:hover{
+    background: transparent;
+    color: #19b888!important;
+}
+
+
+@media screen and (max-width:768px){
+    .scrollmenu .li-mainNav:nth-child(8){
+        margin-left: 0px;
+    }
+    .scrollmenu {
+        display: flex;
+    }
+}

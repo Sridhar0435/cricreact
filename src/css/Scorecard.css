@@ -1,0 +1,82 @@
+.scoreCardArticle{
+    background: #fff;
+    padding: 10px;
+    margin: 14px 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+.ul_scorecard1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ul_scorecard1 li button{
+    text-shadow: 0px 0px 2px black;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+}
+.ul_scorecard1 li button:hover{
+    background: #5fcd94;
+    color: #fff;
+    text-shadow: 0px 0px 0 #fff;
+}
+.ul_scorecard1 li button:focus{
+    background: #5fcd94;
+    color: #fff;
+    text-shadow: 0px 0px 0 #fff;
+}
+.active{
+    background: #5fcd94;
+    color: #fff;
+    text-shadow: 0px 0px 0 #fff;
+}
+.pb0 tr td{
+    padding-bottom: 0!important;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+.scoreCardArticle .highlight thead{
+     color: #5fcd94;
+}
+.fa-baseball-ball{
+    font-size:48px;
+    color:#333
+}
+.extra{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 1px silver;
+}
+.pb0 tr:last-child{
+    border-bottom: 0;
+}
+.playerDetail img:hover{
+    cursor: pointer;
+    transform: scale(1.5,1.5);
+    transition: .2s;
+}
+.pb0 tr td:nth-child(3){
+    opacity: 0.4;
+}
+.notOut{
+    color: #5fcd94;
+}
+@media screen and (max-width:994px){
+    .scoreCardArticle {
+        display: flex;
+    flex-direction: column;
+    }
+
+    .scoreCardArticle .responsive-table thead tr th{
+        padding-bottom: 0!important;
+        font-weight: bolder;
+        letter-spacing: 0.5px;
+    }
+    .scoreCardArticle .responsive-table thead tr th:first-child{
+        height: 112px;
+    }
+
+}

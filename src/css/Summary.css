@@ -1,0 +1,68 @@
+.articleTable{
+    background: #fff;
+    padding: 10px;
+    margin: 14px 0;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+.articleTable .highlight tbody tr:last-child{
+    /* border-bottom: 0; */
+}
+.articleTable .highlight th{
+    text-align: center;
+    font-weight: 600;
+    color: #5fcd94;
+}
+.articleTable .highlight td{
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+.statusSumm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px silver;
+}
+.seriesName{
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #5fcd94;
+    margin: 12px;
+}
+.seriesName span{
+    border-bottom: 2px solid #5fcd94;
+}
+.summaryFig{
+    text-align: center;
+    margin: 0;
+}
+.summaryFig figcaption{
+    font-weight: 700;
+    font-size: 1.3vw;
+}
+.summaryFig img{
+    box-shadow: 0px 0px 5px 1px silver;
+    width: 15vw;
+}
+.teamList li{
+    font-weight: 600;
+    list-style-type: inside!important;
+}
+.tdfull{
+    border-bottom: 2px solid #5fcd94;
+    text-align: left!important;
+    color: #5fcd94!important;
+}
+.upcomingmatchsummary{
+    font-size: 3vw;
+    text-shadow: 1px 1px 1px silver;
+    padding: 50px;
+}
+@media screen and (max-width: 768px){
+    .statusSumm{
+        flex-direction: row-reverse;
+    }
+}

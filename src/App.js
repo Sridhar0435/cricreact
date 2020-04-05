@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Navbar from "./component/Navbar/Navbar";
+import SliderNav from "./component/Navbar/SliderNav";
+import LandingLiveScore from "./component/LandingLiveScore";
+import FooterContent from "./component/Footer/FooterContent";
+import Match from "./component/Match";
+import AllMatch from "./component/AllMatches";
+import Serices from "./component/MainLayout/Serices";
+import SeriesView from "./component/MainLayout/SeriesView";
+import MatchDetails from "./component/MainLayout/matchdetails/MatchDetails";
+import Team from "./component/Team/Team";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <SliderNav />
+        <Switch>
+          <Route path="/" exact component={Serices} />
+          <Route path="/seriesview/:id" component={SeriesView} />
+          <Route path="/matchdetails/:seriesId/:matchId" exact component={MatchDetails} />
+          <Route path="/team/:teamId/:teamName" exact component={Team} />
+        </Switch>
+        <FooterContent />
+        {/* <Route path="/match" component={Match} />
+          <Route path="/allmatch" component={AllMatch} /> */}
+
+      </div>
+    </Router>
   );
 }
 

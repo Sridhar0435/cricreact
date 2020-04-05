@@ -1,0 +1,58 @@
+.setWidth{
+    width: 100%;
+    margin: 0 auto;
+}
+/* .comm{
+    width: 24%!important;
+} */
+.slick-slide.slick-active.slick-current{
+    
+}
+.card.blue-grey.darken-1.slideNav{
+    width: 300px!important;
+    margin: 1px 0 10px 0;
+    padding: 9px 24px;
+}
+.setWidth .slick-slider.slides{
+    position: relative;
+}
+.setWidth .slick-prev{
+    position: absolute;
+    left: 0px;
+    /* background: #4cc891; */
+    z-index: 1;
+    border-radius: 18px;
+    padding: 0px;
+}
+.setWidth .slick-prev:before{
+color: #4cc891;
+}
+
+.setWidth .slick-next{
+    position: absolute;
+    right: 0px;
+    /* background: #4cc891; */
+    z-index: 1;
+    border-radius: 18px;
+    padding: 0px;
+}
+.setWidth .slick-next:before{
+    color: #4cc891;
+}
+.slideNav .card-top-hori .card-title{
+    font-size: 12px;
+    color: #3bc28e;
+}
+.odinum{
+    float: right;
+}
+.slideNav{
+    padding: 9px 24px;
+    margin-top: 1px;
+}
+.card.blue-grey.darken-1.slideNav:hover {
+    background: lightcoral;
+}
+.card.blue-grey.darken-1.slideNav .card-top-hori:hover {
+    color: #233;
+}

@@ -1,0 +1,7 @@
+.container{
+    width: 95%;
+    text-align: center;
+}
+.page-footer{
+    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+}

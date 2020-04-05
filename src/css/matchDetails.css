@@ -1,0 +1,92 @@
+.sectionMatchDetails{
+    /* width: 950px; */
+    background: #fff;
+    padding: 10px;
+    margin: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+.articleMatchDetails{
+    /* background: #fff;
+    padding: 10px;
+    margin: 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px; */
+}
+.divmatchMain .first-ul{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2vw;
+    color: #333;
+    font-weight: 600;
+}
+.second-ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 19px;
+}
+.ul_tab_links li{
+    cursor: pointer;
+}
+.ul_tab_links .tab a{
+    color: rgb(95, 205, 148);
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+.ul_tab_links .tab a:hover{
+    color: #fff;
+    background-color: rgb(95, 205, 148)
+}
+.ul_tab_links .tab a:active{
+    color: #fff;
+    background-color: rgb(95, 205, 148)
+}
+.active{
+    color:#fff!important;
+    background:#5fcd94!important;
+}
+.figureImage{
+    text-align: center;
+    margin: 14px 15px;
+}
+.figureImage img{
+    width: 9vw;
+    box-shadow: 0px 0px 3px 1px silver;
+}
+.figureImage figcaption{
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.figureImageLogo{
+    text-align: center;
+    margin-top: 0;
+}
+.figureImageLogo img{
+    width: 9vw;
+}
+.figureImageLogo figcaption{
+    font-size: 1.2vw;
+    color: #333;
+    font-weight: 600;
+}
+.matchArt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scoreLable{
+    margin-bottom: 3vw;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+}
+.wicketScore{
+    white-space: nowrap;
+}
+.Ovrs{
+    white-space: nowrap;
+}
+.winOrLoss{
+    color: red;
+    font-weight: 600;
+}

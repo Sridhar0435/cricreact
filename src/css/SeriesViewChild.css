@@ -1,0 +1,45 @@
+.SeriesViewChildSection{
+    width: 660px;
+    float: left;
+    position: relative;
+    color: #333;
+    font-size: 13px;
+    font-weight: bolder;
+}
+.SeriesViewChildArticle{
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    margin-left: 0;
+    border: 1px solid #e6e6e6;
+}
+.seriesBox{
+    cursor: pointer;
+}
+.card-content.boxcolor{
+    color: #fff;
+}
+.card-content.boxcolor:hover{
+    color: #333;
+}
+.tdTeamLogo{
+    width: 25px;
+    padding: 0;
+    line-height: 11px;
+}
+.matchLink{
+    color: #333!important;
+}
+/* .scoreDetails{
+    float: right;
+} */
+.card-panel{
+    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+}
+.upcomsrview{
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px silver;
+    text-shadow: 0px 1px 11px black;
+}
