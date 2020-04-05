@@ -18,12 +18,13 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
-  "homepage": "https://Sridhar0435.github.io/cricreact",
+  "homepage": "https://Sridhar0435.github.io/cric2react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
