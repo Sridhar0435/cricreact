@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/cricreact/static/css/main.22c14ce6.chunk.css",
+    "main.js": "/cricreact/static/js/main.8418a7e4.chunk.js",
+    "main.js.map": "/cricreact/static/js/main.8418a7e4.chunk.js.map",
+    "runtime-main.js": "/cricreact/static/js/runtime-main.50d90f31.js",
+    "runtime-main.js.map": "/cricreact/static/js/runtime-main.50d90f31.js.map",
+    "static/css/2.b13d8222.chunk.css": "/cricreact/static/css/2.b13d8222.chunk.css",
+    "static/js/2.fd20253c.chunk.js": "/cricreact/static/js/2.fd20253c.chunk.js",
+    "static/js/2.fd20253c.chunk.js.map": "/cricreact/static/js/2.fd20253c.chunk.js.map",
+    "index.html": "/cricreact/index.html",
+    "precache-manifest.611d16caf5fdbe553980df9c07af9515.js": "/cricreact/precache-manifest.611d16caf5fdbe553980df9c07af9515.js",
+    "service-worker.js": "/cricreact/service-worker.js",
+    "static/css/2.b13d8222.chunk.css.map": "/cricreact/static/css/2.b13d8222.chunk.css.map",
+    "static/css/main.22c14ce6.chunk.css.map": "/cricreact/static/css/main.22c14ce6.chunk.css.map",
+    "static/js/2.fd20253c.chunk.js.LICENSE.txt": "/cricreact/static/js/2.fd20253c.chunk.js.LICENSE.txt",
+    "static/media/loader.gif": "/cricreact/static/media/loader.1d7626e6.gif",
+    "static/media/slick-theme.css": "/cricreact/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50d90f31.js",
+    "static/css/2.b13d8222.chunk.css",
+    "static/js/2.fd20253c.chunk.js",
+    "static/css/main.22c14ce6.chunk.css",
+    "static/js/main.8418a7e4.chunk.js"
+  ]
+}
