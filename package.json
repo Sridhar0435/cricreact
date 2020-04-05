@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Sridhar0435.github.io/cric2react/",
   "name": "cricketreact",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +19,6 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"
   },
-  "homepage": "https://Sridhar0435.github.io/cric2react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
