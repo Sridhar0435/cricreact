@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/cricreact/static/css/main.22c14ce6.chunk.css",
-    "main.js": "/cricreact/static/js/main.992d16b7.chunk.js",
-    "main.js.map": "/cricreact/static/js/main.992d16b7.chunk.js.map",
+    "main.js": "/cricreact/static/js/main.bfe6f3cc.chunk.js",
+    "main.js.map": "/cricreact/static/js/main.bfe6f3cc.chunk.js.map",
     "runtime-main.js": "/cricreact/static/js/runtime-main.50d90f31.js",
     "runtime-main.js.map": "/cricreact/static/js/runtime-main.50d90f31.js.map",
     "static/css/2.b13d8222.chunk.css": "/cricreact/static/css/2.b13d8222.chunk.css",
     "static/js/2.fd20253c.chunk.js": "/cricreact/static/js/2.fd20253c.chunk.js",
     "static/js/2.fd20253c.chunk.js.map": "/cricreact/static/js/2.fd20253c.chunk.js.map",
     "index.html": "/cricreact/index.html",
-    "precache-manifest.06e6ddd7f4f5b304194410a2d0b57035.js": "/cricreact/precache-manifest.06e6ddd7f4f5b304194410a2d0b57035.js",
+    "precache-manifest.672afb94c905d9ba451d56d1e48c22c8.js": "/cricreact/precache-manifest.672afb94c905d9ba451d56d1e48c22c8.js",
     "service-worker.js": "/cricreact/service-worker.js",
     "static/css/2.b13d8222.chunk.css.map": "/cricreact/static/css/2.b13d8222.chunk.css.map",
     "static/css/main.22c14ce6.chunk.css.map": "/cricreact/static/css/main.22c14ce6.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.b13d8222.chunk.css",
     "static/js/2.fd20253c.chunk.js",
     "static/css/main.22c14ce6.chunk.css",
-    "static/js/main.992d16b7.chunk.js"
+    "static/js/main.bfe6f3cc.chunk.js"
   ]
 }
