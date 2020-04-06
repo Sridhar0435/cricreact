@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <SliderNav />
         <Switch>
-          <Route path="/" exact component={Serices} />
+          <Route exact={true} path="/" component={Serices} />
           {/* <Route path="/cric2react" exact component={Serices} /> */}
           <Route path="/seriesview/:id" exact component={SeriesView} />
           <Route path="/matchdetails/:seriesId/:matchId" exact component={MatchDetails} />
