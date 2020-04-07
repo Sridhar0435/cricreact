@@ -36,7 +36,7 @@ class Left extends Component {
 
         return (
             <>
-                <div className="mainbox" onClick={this.slideShowToggle.bind(this)}><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></div>
+                <div className="mainbox" onClick={this.slideShowToggle.bind(this)}><i class="fa fa-bars" aria-hidden="true"></i></div>
                 <section className={this.state.toggle ? "LeftSection dispWid" : "LeftSection hideeWid"}>
                     <a className="closeBtn" onClick={this.closeBtn.bind(this)}>x</a>
                     <article className="leftArticle hoverable">

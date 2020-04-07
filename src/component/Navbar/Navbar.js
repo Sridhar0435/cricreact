@@ -4,6 +4,8 @@ import "./Navbar.css";
 import Match from "../Match";
 import AllMatch from "../AllMatches";
 import { connect } from "react-redux";
+import logo from "../../images/logo150px.png";
+import title150x50 from "../../images/title150x50.png";
 class Navbar extends Component {
 
     render() {
@@ -16,8 +18,9 @@ class Navbar extends Component {
                 <nav className="nav-wrapper grey darken-3">
                     <div className="container">
                         <ul className="scrollmenu">
-                            <li className="li-mainNav hoverable"><Link className="titlink" to="/">CricW!cket</Link></li>
-                            <li className="li-mainNav hoverable"><Link className="titlink" to="/allmatch">Live Score</Link></li>
+                            {/* <li className="li-mainNav "><Link className="titlink logoa" to="/"><img className="logonav" src={logo} alt="" /></Link></li> */}
+                            <li className="li-mainNav "><Link className="titlink title150" to="/"><img src={title150x50} alt="" /></Link></li>
+                            <li className="li-mainNav "><Link className="titlink" to="/allmatch">Live Score</Link></li>
                             <li className="li-mainNav dropdown">
                                 <a className="titlink" to="" >Series <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                                 <div className="sub_nav animated fadeIn">
@@ -45,9 +48,9 @@ class Navbar extends Component {
                                     </ul>
                                 </div>
                             </li>
-                            <li className="li-mainNav hoverable"><Link className="titlink" to="/allmatch">Features</Link></li>
-                            <li className="li-mainNav hoverable"><Link className="titlink" to="/allmatch">Stats</Link></li>
-                            <li className="li-mainNav hoverable"><Link className="titlink" to="/allmatch">Ranking</Link></li>
+                            <li className="li-mainNav "><Link className="titlink" to="/allmatch">Features</Link></li>
+                            <li className="li-mainNav "><Link className="titlink" to="/allmatch">Stats</Link></li>
+                            <li className="li-mainNav "><Link className="titlink" to="/allmatch">Ranking</Link></li>
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.instagram.com/sridhar_achini/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>

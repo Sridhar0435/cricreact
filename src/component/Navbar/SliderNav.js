@@ -9,6 +9,18 @@ import { sliderAction } from "../../actions/myAction"
 import { Link } from "react-router-dom";
 class SliderNav extends Component {
 
+    componentDidUpdate() {
+
+        if (typeof slideNav !== "undefined") {
+            var slideNav = document.querySelectorAll(".slideNav");
+            console.log(slideNav.length);
+            setWidth.style.display = "initial";
+        } else {
+            var setWidth = document.querySelector(".setWidth");
+            setWidth.style.display = "none";
+        }
+
+    }
     componentDidMount() {
         this.props.sliderToProps()
     }

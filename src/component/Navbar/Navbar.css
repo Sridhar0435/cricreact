@@ -13,12 +13,15 @@
     white-space: nowrap;
     font-weight: 600;
     letter-spacing: 0.7px;
+    height: 43px;
 }
 .nav-wrapper.grey.darken-3{
-    height: 42px!important;
+    height: 46px!important;
     line-height: 40px!important;
     border-bottom: 2px solid #fff;
-    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+    background: #6cd297!important;
+    box-shadow: none;
+    /* background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%); */
 }
 .scrollmenu .li-mainNav:nth-child(8){
     margin-left: 340px;
@@ -67,8 +70,27 @@
     background: transparent;
     color: #19b888!important;
 }
-
-
+.logonav{
+    width: 42px;
+}
+.logoa{
+    height: 40px;
+    overflow-y: hidden;
+}
+.scrollmenu .li-mainNav:first-child .titlink:hover{
+    background: none!important;
+}
+.header{
+    display: none;
+}
+.title150{
+    height: 43px;
+    overflow: hidden;
+}
+.title150 img{
+    height: 58px;
+    margin-top: -8px;
+}
 @media screen and (max-width:768px){
     .scrollmenu .li-mainNav:nth-child(8){
         margin-left: 0px;
