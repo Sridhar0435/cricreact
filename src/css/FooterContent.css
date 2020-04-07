@@ -4,4 +4,8 @@
 }
 .page-footer{
     background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

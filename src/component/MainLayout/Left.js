@@ -41,14 +41,17 @@ class Left extends Component {
                     <a className="closeBtn" onClick={this.closeBtn.bind(this)}>x</a>
                     <article className="leftArticle hoverable">
                         <div className="serieContent">
-                            <header className="sericeHeader">Series Details</header>
-                            <ul>
-                                <li>IPL 2020</li>
-                                {AllMatchSeries.map((item, index) => (
-                                    // <li onClick={() => this.props.seriesData(item.id)} key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
-                                    <li key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
-                                ))}
-                            </ul>
+                            {AllMatchSeries.length > 0 ?
+                                <>
+                                    <header className="sericeHeader">Series Details</header>
+                                    <ul>
+                                        <li>IPL 2020</li>
+                                        {AllMatchSeries.map((item, index) => (
+                                            // <li onClick={() => this.props.seriesData(item.id)} key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
+                                            <li key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
+                                        ))}
+                                    </ul>
+                                </> : ""}
                         </div>
                     </article>
                     {/* <article className="leftArticle hoverable">

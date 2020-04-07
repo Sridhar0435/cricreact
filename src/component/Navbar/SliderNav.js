@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import { connect } from "react-redux";
 import { sliderAction } from "../../actions/myAction"
 import { Link } from "react-router-dom";
-import gif from "../../images/loader.gif";
 class SliderNav extends Component {
 
     componentDidMount() {
@@ -126,7 +125,8 @@ class SliderNav extends Component {
                             ))
                             : ""}
 
-                    </Slider> : <img src={gif} width="300px" alt="" />}
+                    </Slider> : ""}
+                {/* <img src={gif} width="300px" alt="" /> */}
             </div>
         )
     }
