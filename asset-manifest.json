@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/cricreact/static/css/main.22c14ce6.chunk.css",
-    "main.js": "/cricreact/static/js/main.47b69c81.chunk.js",
-    "main.js.map": "/cricreact/static/js/main.47b69c81.chunk.js.map",
+    "main.css": "/cricreact/static/css/main.081bbd32.chunk.css",
+    "main.js": "/cricreact/static/js/main.15f3e6ad.chunk.js",
+    "main.js.map": "/cricreact/static/js/main.15f3e6ad.chunk.js.map",
     "runtime-main.js": "/cricreact/static/js/runtime-main.50d90f31.js",
     "runtime-main.js.map": "/cricreact/static/js/runtime-main.50d90f31.js.map",
     "static/css/2.b13d8222.chunk.css": "/cricreact/static/css/2.b13d8222.chunk.css",
-    "static/js/2.fd20253c.chunk.js": "/cricreact/static/js/2.fd20253c.chunk.js",
-    "static/js/2.fd20253c.chunk.js.map": "/cricreact/static/js/2.fd20253c.chunk.js.map",
+    "static/js/2.e3b61be0.chunk.js": "/cricreact/static/js/2.e3b61be0.chunk.js",
+    "static/js/2.e3b61be0.chunk.js.map": "/cricreact/static/js/2.e3b61be0.chunk.js.map",
     "index.html": "/cricreact/index.html",
-    "precache-manifest.9774913ae771f47d1bf366e4a4283533.js": "/cricreact/precache-manifest.9774913ae771f47d1bf366e4a4283533.js",
+    "precache-manifest.51706021b321bea40a01869dd15ce0cf.js": "/cricreact/precache-manifest.51706021b321bea40a01869dd15ce0cf.js",
     "service-worker.js": "/cricreact/service-worker.js",
     "static/css/2.b13d8222.chunk.css.map": "/cricreact/static/css/2.b13d8222.chunk.css.map",
-    "static/css/main.22c14ce6.chunk.css.map": "/cricreact/static/css/main.22c14ce6.chunk.css.map",
-    "static/js/2.fd20253c.chunk.js.LICENSE.txt": "/cricreact/static/js/2.fd20253c.chunk.js.LICENSE.txt",
+    "static/css/main.081bbd32.chunk.css.map": "/cricreact/static/css/main.081bbd32.chunk.css.map",
+    "static/js/2.e3b61be0.chunk.js.LICENSE.txt": "/cricreact/static/js/2.e3b61be0.chunk.js.LICENSE.txt",
     "static/media/loader.gif": "/cricreact/static/media/loader.1d7626e6.gif",
+    "static/media/loadercircle.gif": "/cricreact/static/media/loadercircle.f6cd1e34.gif",
     "static/media/slick-theme.css": "/cricreact/static/media/slick.f97e3bbf.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.50d90f31.js",
     "static/css/2.b13d8222.chunk.css",
-    "static/js/2.fd20253c.chunk.js",
-    "static/css/main.22c14ce6.chunk.css",
-    "static/js/main.47b69c81.chunk.js"
+    "static/js/2.e3b61be0.chunk.js",
+    "static/css/main.081bbd32.chunk.css",
+    "static/js/main.15f3e6ad.chunk.js"
   ]
 }
