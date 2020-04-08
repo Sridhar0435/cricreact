@@ -27,6 +27,8 @@
 .sericeContentRight ul li {
     border-bottom: 1px dotted silver;
     cursor: pointer;
+    line-height: 21px;
+    padding: 6px 0px;
 }
 .sericeContentRight ul li:hover {
     /* background: lavender;
