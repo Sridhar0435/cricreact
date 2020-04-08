@@ -22,35 +22,34 @@ class Navbar extends Component {
                             <li className="li-mainNav "><Link className="titlink title150" to="/"><img src={title150x50} alt="" /></Link></li>
                             <li className="li-mainNav "><Link className="titlink" to="/allmatch">Live Score</Link></li>
                             <li className="li-mainNav dropdown">
-                                <a className="titlink" to="" >Series <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <a className="titlink">Series <i className="fa fa-caret-down" aria-hidden="true"></i></a>
                                 <div className="sub_nav animated fadeIn">
                                     <ul className="sub-ul-drop">
-                                        {seriesList.length > 0 ? seriesList.map(item => <li className="sub-li-drop">
+                                        {seriesList.length > 0 ? seriesList.map((item, index) => <li key={index} className="sub-li-drop">
                                             <Link className="sub-a-drop" to={`/seriesview/${item.id}`}> {item.name} </Link></li>) : ""}
-
                                     </ul>
                                 </div>
                             </li>
                             <li className="li-mainNav dropdown">
-                                <a className="titlink" to="" >Teams <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                <a className="titlink" to="" >Teams <i className="fa fa-caret-down" aria-hidden="true"></i></a>
                                 <div className="sub_nav animated fadeIn">
                                     <ul className="sub-ul-drop">
-                                        <li className="sub-li-drop"><Link to="/team/3/India"><a className="sub-a-drop" >India</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/1/Australia"><a className="sub-a-drop" >Australia</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/20/England"><a className="sub-a-drop" >England</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/6/South Africa"><a className="sub-a-drop" >South Africa</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/1/West Indies"><a className="sub-a-drop">West Indies</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/7/SriLanka"><a className="sub-a-drop" >SriLanka</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/10/Bangladesh"><a className="sub-a-drop" >Bangladesh</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/5/Pakistan"><a className="sub-a-drop" >Pakistan</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/1/Afganistan"><a className="sub-a-drop" >Afganistan</a></Link></li>
-                                        <li className="sub-li-drop"><Link to="/team/4/New Zealand"><a className="sub-a-drop" >New Zealand</a></Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/3/India" className="sub-a-drop" >India</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/1/Australia" className="sub-a-drop" >Australia</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/20/England" className="sub-a-drop" >England</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/6/South Africa" className="sub-a-drop" >South Africa</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/1/West Indies" className="sub-a-drop" >West Indies</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/7/SriLanka" className="sub-a-drop" >SriLanka</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/10/Bangladesh" className="sub-a-drop" >Bangladesh</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/5/Pakistan" className="sub-a-drop" >Pakistanx</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/1/Afganistan" className="sub-a-drop" >Afganistan</Link></li>
+                                        <li className="sub-li-drop"><Link to="/team/4/New Zealand" className="sub-a-drop" >New Zealand</Link></li>
                                     </ul>
                                 </div>
                             </li>
                             <li className="li-mainNav "><Link className="titlink" to="/allmatch">Features</Link></li>
                             <li className="li-mainNav "><Link className="titlink" to="/allmatch">Stats</Link></li>
-                            <li className="li-mainNav "><Link className="titlink" to="/allmatch">Ranking</Link></li>
+                            {/* <li className="li-mainNav "><Link className="titlink" to="/allmatch">Ranking</Link></li> */}
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.instagram.com/sridhar_achini/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>

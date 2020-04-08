@@ -44,8 +44,6 @@ export const myAction = (name) => {
         } else {
             dispatch({ type: "GET_ALLMATCHES", payload: AllMatchSeries[name] })
         }
-
-
     }
 }
 
@@ -72,5 +70,31 @@ export const getBySeriesId = (index) => {
             return item.series.id === parseInt(index);
         })
         dispatch({ type: "GET_BY_SERIES_ID", payload: idsFilter })
+    }
+}
+
+export const newsApiAction = () => {
+    return async (dispatch) => {
+        var data = await fetch("http://newsapi.org/v2/everything?q=cricket&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var toJson = await data.json();
+        var filterArticele = toJson.articles.filter((item, index) => {
+            if (index <= 5) {
+                return item
+            }
+        })
+        dispatch({ type: "FROM_NEWS_API", payload: filterArticele })
+    }
+}
+
+export const headLinesAction = () => {
+    return async (dispatch) => {
+        var data = await fetch("http://newsapi.org/v2/everything?q=cricket headlines&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var toJson = await data.json();
+        var filterArticele = toJson.articles.filter((item, index) => {
+            if (index <= 5) {
+                return item
+            }
+        })
+        dispatch({ type: "HEAD_LINES", payload: filterArticele })
     }
 }

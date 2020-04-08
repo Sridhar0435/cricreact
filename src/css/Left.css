@@ -31,6 +31,7 @@ body{
     font-size: 16px;
     /* color: lightcoral; */
     color: #6cd297;
+    font-weight: 600;
 }
 .serieContent ul li{
     border-bottom: 1px dotted silver;

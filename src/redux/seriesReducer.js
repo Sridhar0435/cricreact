@@ -2,7 +2,9 @@
 const iState = {
     passAllMatDataFromReducer: [],
     byId: [],
-    sliderData: ""
+    sliderData: "",
+    newsApi: "",
+    headLinesState: ""
 }
 
 const seriesReducer = (state = iState, action) => {
@@ -25,6 +27,16 @@ const seriesReducer = (state = iState, action) => {
             return {
                 ...state,
                 sliderData: action.payload
+            }
+        case "FROM_NEWS_API":
+            return {
+                ...state,
+                newsApi: action.payload
+            }
+        case "HEAD_LINES":
+            return {
+                ...state,
+                headLinesState: action.payload
             }
     }
     return state;

@@ -24,7 +24,11 @@
     margin: 0em 10px;
     padding: 10px 1px;
 }
-
+.imageTitleMiddle{
+    font-weight: 700;
+    font-size: large;
+    color: cornflowerblue;
+}
 @media screen and (max-width:768px){
     .middleSection{
         width: 100%;

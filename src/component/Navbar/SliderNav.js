@@ -63,7 +63,7 @@ class SliderNav extends Component {
                     <Slider {...settings}>
                         {matchesOnSlide !== "" ?
                             matchesOnSlide.map((item, index) => (
-                                <>
+                                <span key={index}>
                                     <Link to={`/matchdetails/${item.series.id}/${item.id}`}>
                                         {item.isLive ?
                                             <div className="card blue-grey darken-1 slideNav">
@@ -82,13 +82,13 @@ class SliderNav extends Component {
                                                 </div>
                                             </div> : ""}
                                     </Link>
-                                </>
+                                </span>
                             ))
                             : ""}
                         {matchesOnSlide !== "" ?
                             matchesOnSlide.map((item, index) => (
-                                <>
-                                    <Link key={index} to={`/matchdetails/${item.series.id}/${item.id}`}>
+                                <span key={index}>
+                                    <Link to={`/matchdetails/${item.series.id}/${item.id}`}>
                                         {item.status === "UPCOMING" && item.homeTeam.name !== "Unknown" ?
                                             <div className="card blue-grey darken-1 slideNav">
                                                 <div className="card-content card-top-hori">
@@ -106,14 +106,14 @@ class SliderNav extends Component {
                                                 </div>
                                             </div> : ""}
                                     </Link>
-                                </>
+                                </span>
                             ))
                             : ""}
 
                         {matchesOnSlide !== "" ?
                             matchesOnSlide.map((item, index) => (
-                                <>
-                                    <Link key={index} to={`/matchdetails/${item.series.id}/${item.id}`}>
+                                <span key={index}>
+                                    <Link to={`/matchdetails/${item.series.id}/${item.id}`}>
                                         {item.status === "COMPLETED" ?
                                             <div className="card blue-grey darken-1 slideNav">
                                                 <div className="card-content card-top-hori">
@@ -133,7 +133,7 @@ class SliderNav extends Component {
                                                 </div>
                                             </div> : ""}
                                     </Link>
-                                </>
+                                </span>
                             ))
                             : ""}
 

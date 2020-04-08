@@ -99,7 +99,6 @@ class Commentary extends Component {
                                     </React.Fragment>
                                 )) : <img src={gif} width="300px" alt="" />}
                         </div>
-                        <h1 className="flow-text"> img</h1>
                     </article> : <img src={gif} width="300px" alt="" />}
             </section>
         )

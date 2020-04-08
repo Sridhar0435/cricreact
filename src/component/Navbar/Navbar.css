@@ -14,16 +14,19 @@
     font-weight: 600;
     letter-spacing: 0.7px;
     height: 43px;
+    /* padding-left: 0; */
+    /* padding-right: 0; */
 }
 .nav-wrapper.grey.darken-3{
     height: 46px!important;
     line-height: 40px!important;
     border-bottom: 2px solid #fff;
-    background: #6cd297!important;
+    /* background: #6cd297!important; */
+    /* background: #424242 !important; */
     box-shadow: none;
-    /* background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%); */
+    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
 }
-.scrollmenu .li-mainNav:nth-child(8){
+.scrollmenu .li-mainNav:nth-child(7){
     margin-left: 340px;
 }
 .scrollmenu .li-mainNav .titlink i{
@@ -97,5 +100,8 @@
     }
     .scrollmenu {
         display: flex;
+    }
+    .scrollmenu .li-mainNav .titlink{
+        padding-left: 0;
     }
 }

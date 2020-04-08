@@ -27,7 +27,7 @@ class Summary extends Component {
             <section>
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
                     <header>{inSummary !== "" ? showInSummary.tossMessage : ""}</header>
-                    <span>if Batting</span>
+                    {/* <span>if Batting</span> */}
 
                 </article>
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
