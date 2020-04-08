@@ -75,7 +75,7 @@ export const getBySeriesId = (index) => {
 
 export const newsApiAction = () => {
     return async (dispatch) => {
-        var data = await fetch("http://newsapi.org/v2/everything?q=cricket&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var data = await fetch("https://newsapi.org/v2/everything?q=cricket&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
         var toJson = await data.json();
         var filterArticele = toJson.articles.filter((item, index) => {
             if (index <= 5) {
@@ -88,7 +88,7 @@ export const newsApiAction = () => {
 
 export const headLinesAction = () => {
     return async (dispatch) => {
-        var data = await fetch("http://newsapi.org/v2/everything?q=cricket headlines&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var data = await fetch("https://newsapi.org/v2/everything?q=cricket headlines&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
         var toJson = await data.json();
         var filterArticele = toJson.articles.filter((item, index) => {
             if (index <= 5) {
