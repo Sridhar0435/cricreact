@@ -27,14 +27,12 @@ class Middle extends Component {
                 {news !== "" ?
                     newsAppend.map((item, index) => (
 
-                        <article className="middleArticle hoverable" key={index} onClick={(e) => this.redirection(e, item.url)}>
+                        <article className="middleArticle hoverable" key={index} >
                             <figure>
                                 <h6>{item.title}</h6>
-                                <a href="">
-                                    <img src={item.urlToImage} alt="" />
-                                </a>
+                                <img src={item.urlToImage} alt="" />
                                 <figcaption>
-                                    <h5 className="imageTitleMiddle">{item.description}</h5>
+                                    <h5 className="imageTitleMiddle" onClick={(e) => this.redirection(e, item.url)}>{item.description}</h5>
                                     {/* <p>{item.content}</p> */}
                                 </figcaption>
                             </figure>
