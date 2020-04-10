@@ -28,7 +28,7 @@ function App(props) {
           <>
             <Switch>
               <Route exact={true} path={process.env.PUBLIC_URL + '/'} component={Serices} />
-              <Route path={process.env.PUBLIC_URL + '/seriesview/:id'} exact component={SeriesView} />
+              <Route path="/seriesview/:id" exact component={SeriesView} />
               <Route path="/matchdetails/:seriesId/:matchId" exact component={MatchDetails} />
               <Route path="/team/:teamId/:teamName" exact component={Team} />
             </Switch>
