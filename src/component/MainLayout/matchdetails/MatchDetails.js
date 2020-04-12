@@ -25,7 +25,7 @@ class MatchDetails extends Component {
                 <MatchCommonData seriesId={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} tabIndex={this.props.makeActive} />
                 {/* <ScoreCard seriesId={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} /> */}
                 {/* <Commentary seriesId={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} /> */}
-                {this.props.displaySum && this.props.matchShowTime !== "" ? <Summary seriesIdSummary={this.props.match.params.seriesId} /> : ""}
+                {this.props.displaySum && this.props.matchShowTime !== "" ? <Summary seriesIdSummary={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} /> : ""}
                 {this.props.scoreCard && this.props.matchShowTime !== "" ? <ScoreCard seriesId={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} /> : ""}
                 {this.props.commentary && this.props.matchShowTime !== "" ? <Commentary seriesId={this.props.match.params.seriesId} matchId={this.props.match.params.matchId} /> : ""}
                 {this.props.statistics && this.props.matchShowTime !== "" ? <Statistics /> : ""}

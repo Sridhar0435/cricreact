@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../../css/Summary.css"
 import { connect } from "react-redux";
 import { getSeriesTeamNames } from "../../actions/matchDetailAction";
+import PartnerShip from "../MatchSummary/PartnerShip";
 class Summary extends Component {
     constructor(props) {
         super(props);
@@ -9,7 +10,6 @@ class Summary extends Component {
     componentDidMount() {
         this.props.seriesTeamNames(this.props.seriesIdSummary)
     }
-
     render() {
 
         console.log(this.props.getSeriesTeams)
@@ -26,11 +26,13 @@ class Summary extends Component {
         return (
             <section>
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
-                    <header>{inSummary !== "" ? showInSummary.tossMessage : ""}</header>
-                    {/* <span>if Batting</span> */}
-
+                    {inSummary !== "" ? <PartnerShip sId={this.props.seriesIdSummary} mId={this.props.matchId} firstIn={showInSummary.innings[0].shortName} secondIn={showInSummary.innings[1].shortName} /> : "Loading..."}
                 </article>
+                {/* <article className="articleTable hoverable animated bounceInLeft delay-1s">
+                    <header>{inSummary !== "" ? showInSummary.tossMessage : ""}</header>
+                </article> */}
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
+                    <h5><span className="PartnershipTitle">Teams</span></h5>
                     <table className="responsive-table highlight">
                         <thead>
                             <tr className="">
@@ -82,17 +84,11 @@ class Summary extends Component {
 
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
                     <header className="seriesName"><span>{summaryPageShow !== "" ? summaryPageShow.metaData.series : ""}</span></header>
-                    <div>
-                        <ul className="teamList">
-                            <li>AUS</li>
-                            <li>IND</li>
-                            <li>ENG</li>
-                        </ul>
-                    </div>
+
                     <div className="row">
                         {seriesTeamNames !== "" ? seriesTeamNames.seriesTeams.teams.map((item, index) => (
 
-                            <div className="col l4 s3" key={index}>
+                            <div className="col l4 s6" key={index}>
                                 <article >
                                     <figure className="summaryFig">
                                         <img src={item.logoUrl} alt="" />
@@ -105,7 +101,6 @@ class Summary extends Component {
                     </div>
                 </article>
 
-                <h1>Summary</h1>
             </section>
         )
     }

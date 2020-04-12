@@ -73,9 +73,12 @@ export const getBySeriesId = (index) => {
     }
 }
 
+var today = new Date();
+var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
 export const newsApiAction = () => {
     return async (dispatch) => {
-        var data = await fetch("https://newsapi.org/v2/everything?q=cricket&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var data = await fetch(`https://newsapi.org/v2/everything?q=cricket&from=${date}&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5`)
         var toJson = await data.json();
         var filterArticele = toJson.articles.filter((item, index) => {
             if (index <= 5) {
@@ -85,10 +88,9 @@ export const newsApiAction = () => {
         dispatch({ type: "FROM_NEWS_API", payload: filterArticele })
     }
 }
-
 export const headLinesAction = () => {
     return async (dispatch) => {
-        var data = await fetch("https://newsapi.org/v2/everything?q=cricket headlines&from=2020-04-08&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5")
+        var data = await fetch(`https://newsapi.org/v2/everything?q=cricket headlines&from=${date}&sortBy=popularity&apiKey=cb0bd15618dd4262bcf3ab66ecf1b3d5`)
         var toJson = await data.json();
         var filterArticele = toJson.articles.filter((item, index) => {
             if (index <= 5) {

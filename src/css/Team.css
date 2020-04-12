@@ -27,6 +27,9 @@
     display: grid;
     grid-template-columns: 320px 200px;
     align-items: center;
+    
+}
+.figDiv{
     border: 1px solid #e6e6e6;
     padding: 10px;
     border-radius: 10px;
@@ -34,6 +37,10 @@
 }
 .ul1_team {
     font-weight: 600;
+    border-top-right-radius: 10px;
+}
+.row_select .col.l3.s12{
+    margin: 12px 0;
 }
 .li_p{
     font-weight: 600;
@@ -44,7 +51,7 @@
 .bio{
     font-weight: 600;
     letter-spacing: 0.2px;
-    color: #55cb93;
+    color: #212121;
 }
 .titl{
     text-align: center;

@@ -10,6 +10,11 @@ class SeriesView extends Component {
     // componentWillMount() {
     //     console.log("match " + this.props.match.params.id)
     // }
+    componentDidUpdate() {
+        var left = document.querySelector(".LeftSection")
+        left.classList.remove('dispWid');
+        left.classList.add('hideeWid');
+    }
     render() {
         return (
             <div className="parentMiddleBox">

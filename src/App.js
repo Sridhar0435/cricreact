@@ -11,6 +11,9 @@ import Serices from "./component/MainLayout/Serices";
 import SeriesView from "./component/MainLayout/SeriesView";
 import MatchDetails from "./component/MainLayout/matchdetails/MatchDetails";
 import Team from "./component/Team/Team";
+import Livescore from "./component/Livescore/Livescore";
+import Terms_and_conditions from "./component/RelatedToSite/Terms_and_conditions";
+import About_us from "./component/RelatedToSite/About_us";
 import { connect } from "react-redux";
 import gif from "./images/loadercircle.gif";
 
@@ -18,8 +21,6 @@ function App(props) {
   console.log("app")
   console.log(props.mainApp)
   return (
-
-
     <Router>
       <div className="App">
         <Navbar />
@@ -31,15 +32,15 @@ function App(props) {
               <Route path="/seriesview/:id" exact component={SeriesView} />
               <Route path="/matchdetails/:seriesId/:matchId" exact component={MatchDetails} />
               <Route path="/team/:teamId/:teamName" exact component={Team} />
+              <Route path="/livescore" exact component={Livescore} />
+              <Route path="/terms_and_conditions" exact component={Terms_and_conditions} />
+              <Route path="/about_us" exact component={About_us} />
             </Switch>
             <FooterContent />
           </>
           : <img src={gif} className="loadSpin" width="300px" alt="" />}
-
       </div>
     </Router>
-
-
   );
 }
 

@@ -60,6 +60,13 @@ export const matchLiveAndHighLightAction = (seriesId, matchId) => {
     }
 }
 
+export const partnerShipAction = (sId, mId, inningsId) => {
+    return async (dispatch) => {
+        var fetchData = await fetch(`https://dev132-cricket-live-scores-v1.p.rapidapi.com/partnerships.php?seriesid=${sId}&matchid=${mId}&innid=${inningsId}`, config);
+        var toJson = await fetchData.json();
+        dispatch({ type: "PARTNER_SHIP", payload: toJson })
+    }
+}
 // export const scordCardAction = (sid, mid) => {
 //     return async (dispatch) => {
 //         console.log("scordCardAction")

@@ -1,0 +1,37 @@
+.first_bar{
+    transform: rotate(180deg);
+    height: 16px;
+    transition: .3s;
+    background: #d5e4dc;
+}
+.p_1_span{
+    float: right;
+    font-weight: 700;
+}
+.p_2_span{
+    float: left;
+    font-weight: 700;
+}
+.sec_bar{
+    height: 16px;
+    transition: .3s;
+    background: #d5e4dc;
+}
+.bar_th{
+    width: 40%;
+}
+.barColor{
+    background: #5fcd94;
+}
+.PartnershipTitle{
+    color: #5fcd94;
+    border-bottom: 2px solid;
+    font-weight: 600;
+    text-shadow: 0.5px 0.5px 0.5px silver;
+    letter-spacing: 0.5px;
+}
+@media screen and (max-width: 768px){
+    .parship_Box {
+        overflow-x: scroll;
+    }
+}

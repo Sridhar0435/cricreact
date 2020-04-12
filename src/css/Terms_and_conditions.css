@@ -1,0 +1,30 @@
+.termsArticle{
+    margin: 10px;
+    padding: 4px 8px;
+}
+.head_h5_terms{
+    text-align: center;
+}
+#terms-and-conditions{
+    padding: 25px 50px;
+    background: #fff;
+    
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #e6e6e6;
+}
+.head_h5_terms b{
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+}   
+@media screen and (max-width:768px){
+    #terms-and-conditions{
+        padding: 0px 7px;
+    }
+    .head_h5_terms b{
+       font-size: 15px;
+    }   
+    .termsArticle {
+        margin: 0px;
+    }
+}

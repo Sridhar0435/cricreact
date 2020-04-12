@@ -26,7 +26,7 @@
     box-shadow: none;
     background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
 }
-.scrollmenu .li-mainNav:nth-child(7){
+.scrollmenu .li-mainNav:nth-child(6){
     margin-left: 340px;
 }
 .scrollmenu .li-mainNav .titlink i{
@@ -101,7 +101,7 @@
     .scrollmenu {
         display: flex;
     }
-    .scrollmenu .li-mainNav .titlink{
+    /* .scrollmenu .li-mainNav .titlink{
         padding-left: 0;
-    }
+    } */
 }

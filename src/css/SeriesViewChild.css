@@ -50,3 +50,12 @@
     text-shadow: 1px 1px 1px silver;
     text-shadow: 0px 1px 11px black;
 }
+
+@media screen and (max-width:768px){
+    .SeriesViewChildSection {
+        width: 100%;
+    }
+    .SeriesViewChildArticle {
+        margin-right: 0;
+    }
+}

@@ -2,7 +2,7 @@
     background: #fff;
     padding: 10px;
     margin: 14px 0;
-    border: 1px solid #e6e6e6;
+    /* border: 1px solid #e6e6e6; */
     border-radius: 10px;
 }
 .articleTable .highlight tbody tr:last-child{
@@ -31,6 +31,7 @@
     font-weight: 600;
     color: #5fcd94;
     margin: 12px;
+    padding: 15px;
 }
 .seriesName span{
     border-bottom: 2px solid #5fcd94;

@@ -12,7 +12,8 @@ const matchDetailState = {
     displayTable: false,
     tabActive: 0,
     seriesTeams: "",
-    matchLiveData: ""
+    matchLiveData: "",
+    partnerShipR: ""
 }
 
 const matchDetailReducer = (state = matchDetailState, action) => {
@@ -92,11 +93,11 @@ const matchDetailReducer = (state = matchDetailState, action) => {
                 matchLiveData: action.payload
 
             }
-        // case "MATCH_SCORE_CARD":
-        //     return {
-        //         ...state,
-        //         scorecard: action.payload
-        //     }
+        case "PARTNER_SHIP":
+            return {
+                ...state,
+                partnerShipR: action.payload
+            }
     }
     console.log(state)
     return state;
