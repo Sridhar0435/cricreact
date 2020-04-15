@@ -101,6 +101,11 @@
     .scrollmenu {
         display: flex;
     }
+    .title150 img{
+        height: 49px;
+        margin-top: -4px;
+        margin-left: -21px;
+    }
     /* .scrollmenu .li-mainNav .titlink{
         padding-left: 0;
     } */

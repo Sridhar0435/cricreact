@@ -28,7 +28,8 @@ function App(props) {
         {props.mainApp.length > 0 ?
           <>
             <Switch>
-              <Route exact={true} path={process.env.PUBLIC_URL + '/'} component={Serices} />
+              {/* <Route exact={true} path={process.env.PUBLIC_URL + '/'} component={Serices} /> */}
+              <Route exact={true} path="/" component={Serices} />
               <Route path="/seriesview/:id" exact component={SeriesView} />
               <Route path="/matchdetails/:seriesId/:matchId" exact component={MatchDetails} />
               <Route path="/team/:teamId/:teamName" exact component={Team} />

@@ -4,7 +4,8 @@ const iState = {
     byId: [],
     sliderData: "",
     newsApi: "",
-    headLinesState: ""
+    headLinesState: "",
+    inLiveScorePage: ""
 }
 
 const seriesReducer = (state = iState, action) => {
@@ -37,6 +38,11 @@ const seriesReducer = (state = iState, action) => {
             return {
                 ...state,
                 headLinesState: action.payload
+            }
+        case "LIVE_SCORE_PAGE":
+            return {
+                ...state,
+                inLiveScorePage: action.payload
             }
     }
     return state;

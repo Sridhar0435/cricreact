@@ -39,7 +39,11 @@ body{
 }
 .serieContent ul li a{
     color: #366148;
-    font-weight: 100;
+    font-weight: 600;
+
+}
+.serieContent ul li:last-child{
+    border-bottom: 0;
 }
 .serieContent ul li:hover{
     background: lavender;

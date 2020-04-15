@@ -25,7 +25,7 @@ class Middle extends Component {
         return (
             <section className="middleSection">
                 {news !== "" ?
-                    newsAppend.map((item, index) => (
+                    newsAppend.reverse().map((item, index) => (
 
                         <article className="middleArticle hoverable" key={index} >
                             <figure>

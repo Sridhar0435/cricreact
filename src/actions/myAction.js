@@ -100,3 +100,23 @@ export const headLinesAction = () => {
         dispatch({ type: "HEAD_LINES", payload: filterArticele })
     }
 }
+
+export const liveScorePageAction = () => {
+    return async (dispatch) => {
+        var config = {
+            headers: new Headers({
+                "x-rapidapi-host": "dev132-cricket-live-scores-v1.p.rapidapi.com",
+                "x-rapidapi-key": "f9e86c1dcdmsh81b584bae5260e0p19795cjsnb26c4be792a1"
+            }),
+        }
+        var data = await fetch("https://dev132-cricket-live-scores-v1.p.rapidapi.com/matches.php", config);
+        var toJson = await data.json();
+        // if (typeof name === "undefined") {
+        //     dispatch({ type: "GET_ALLMATCHES", payload: toJson.matchList.matches })
+        // } else {
+        //     dispatch({ type: "GET_ALLMATCHES", payload: toJson.matchList.matches[name] })
+        // }
+        dispatch({ type: "LIVE_SCORE_PAGE", payload: toJson.matchList.matches })
+
+    }
+}

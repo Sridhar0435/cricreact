@@ -37,7 +37,7 @@ class FooterContent extends Component {
                 </div>
                 <div className="footer-copyright">
                     <div className="container">
-                        Copyright 2020 © cricklivescore.com developer & maintained by Sridhar Achini
+                        Copyright 2020 © cricklivescore.com Developed & Maintained by Sridhar Achini
                     </div>
                 </div>
                 {/* <Footer /> */}

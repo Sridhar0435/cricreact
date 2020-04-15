@@ -1,0 +1,25 @@
+.liveScoreArticle .row{
+    text-align: center;
+}
+.titleh5{
+    text-align: center;
+}
+
+.liveFirstRow{
+    position: sticky;
+    top: 6px;
+    background: #f2f2f2;
+}
+.live_First_ul{
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+    background: #f2f2f2; 
+}
+.live_First_ul li a {
+    color: #333;
+}

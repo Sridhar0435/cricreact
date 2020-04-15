@@ -21,21 +21,24 @@ class Right extends Component {
             var headLineAppend = this.props.headLinesFromReducer;
         }
         return (
-            <section className="rightSection">
 
-                <article className="rightArticle hoverable">
-                    <div className="sericeContentRight">
-                        <header className="sericeHeader"><i className="fa fa-rss" aria-hidden="true"></i>  Trending</header>
-                        <ul>
-                            {headlineCheck !== "" ?
-                                headLineAppend.map((item, index) => (
-                                    <li key={index} onClick={(e) => this.headLineRedirect(e, item.url)}>{item.title}</li>
-                                ))
-                                : ""}
-                        </ul>
-                    </div>
-                </article>
-                {/* <article className="rightArticle hoverable">
+            <>
+                {headlineCheck !== "" ?
+                    <section className="rightSection">
+
+                        <article className="rightArticle hoverable">
+                            <div className="sericeContentRight">
+                                <header className="sericeHeader"><i className="fa fa-rss" aria-hidden="true"></i>  Trending</header>
+                                <ul>
+
+                                    {headLineAppend.map((item, index) => (
+                                        <li key={index} onClick={(e) => this.headLineRedirect(e, item.url)}>{item.title}</li>
+                                    ))}
+
+                                </ul>
+                            </div>
+                        </article>
+                        {/* <article className="rightArticle hoverable">
                     <div className="sericeContentRight">
                         <header className="sericeHeader">Top Headlines</header>
                         <ul>
@@ -45,7 +48,9 @@ class Right extends Component {
                         </ul>
                     </div>
                 </article> */}
-            </section>
+                    </section>
+                    : ""}
+            </>
         )
     }
 }
