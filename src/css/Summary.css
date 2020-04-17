@@ -27,7 +27,7 @@
 }
 .seriesName{
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 17px;
     font-weight: 600;
     color: #5fcd94;
     margin: 12px;
@@ -62,8 +62,17 @@
     text-shadow: 1px 1px 1px silver;
     padding: 50px;
 }
+.logos_teams_summary {
+    text-align: center;
+}
+.logos_teams_summary img{
+    width: 50%;
+}
 @media screen and (max-width: 768px){
     .statusSumm{
         flex-direction: row-reverse;
+    }
+    .seriesName{
+        font-size: 14px;
     }
 }

@@ -1,5 +1,7 @@
 .liveScoreArticle .row{
     text-align: center;
+    /* display: flex;
+    flex-direction: column; */
 }
 .titleh5{
     text-align: center;
@@ -7,7 +9,6 @@
 
 .liveFirstRow{
     position: sticky;
-    top: 6px;
     background: #f2f2f2;
 }
 .live_First_ul{
@@ -15,11 +16,29 @@
     justify-content: space-around;
     font-weight: 600;
     letter-spacing: 0.5px;
-    font-size: 20px;
+    font-size: 15px;
     position: sticky;
     top: 0;
     background: #f2f2f2; 
+    z-index: 4;
 }
 .live_First_ul li a {
     color: #333;
 }
+.live_First_ul li a.active {
+    border-bottom: 2px solid lightcoral;
+    background: #f2f2f2!important;
+    color: #333!important;
+}
+/* #liveMain{
+    height: 100vh;
+    background: #000;
+}
+#completedLivescore{
+    height: 100vh;
+    background: lightcoral;
+}
+#upcomingLivescore{
+    height: 100vh;
+    background: greenyellow;
+} */

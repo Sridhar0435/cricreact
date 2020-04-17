@@ -29,6 +29,10 @@ class Left extends Component {
             toggle: !this.state.toggle
         })
     }
+    // ScrollOut({
+    //     /* options */
+    // })
+
     render() {
         // console.log("Left " + this.props.id)
         // console.log("Left " + this.props.getAllMatDataFromRed) classname = LeftSection

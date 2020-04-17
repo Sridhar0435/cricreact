@@ -58,6 +58,10 @@ body{
 .mainbox, .closeBtn{
     display: none;
 }
+[data-scroll] {
+    transition: all 2s;
+}
+
 @media screen and (max-width:800px){
     .LeftSection{
         position: absolute;

@@ -6,12 +6,41 @@
     border: 1px solid #e6e6e6;
     border-radius: 10px;
 }
-.articleMatchDetails{
-    /* background: #fff;
-    padding: 10px;
-    margin: 14px;
-    border: 1px solid #e6e6e6;
-    border-radius: 10px; */
+/* .articleMatchDetails{
+    background-image: url(https://www.cricket.com.au/-/media/Logos/Series/2020/series-WT20.ashx);
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.5;
+} */
+
+.divmatchMain{
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.divmatchMain::after {
+    content: "";
+    /* background-image: url("https://www.cricket.com.au/-/media/Logos/Series/2020/series-WT20.ash"); */
+    /* background-image: url("https://wallpaperset.com/w/full/c/4/2/239958.jpg"); */
+    background-image: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    /* opacity: 0.2; */
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;  
+    /* filter: brightness(164%);
+    -webkit-filter: brightness(164%); */
+    filter: blur(3px);
+    box-shadow: inset 0px 0px 135px black;
 }
 .divmatchMain .first-ul{
     display: flex;
@@ -20,6 +49,7 @@
     color: #333;
     font-weight: 600;
 }
+
 .second-ul li{
     display: flex;
     justify-content: space-between;
@@ -50,12 +80,13 @@
     margin: 14px 15px;
 }
 .figureImage img{
-    width: 9vw;
-    box-shadow: 0px 0px 3px 1px silver;
+    width: 100%;
+    /* box-shadow: 0px 0px 3px 1px silver; */
 }
 .figureImage figcaption{
-    font-size: 1.5vw;
+    font-size: 18px;
     font-weight: bolder;
+    color: #fff;
 }
 .figureImageLogo{
     text-align: center;
@@ -89,4 +120,45 @@
 .winOrLoss{
     color: red;
     font-weight: 600;
+}
+.summary_If_Up_ul{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+}
+.summary_If_Up_ul_li2{
+    font-size: 25px;
+}
+.summary_If_Up_ul_li3{
+    font-size: large;
+}
+.summary_If_Up_ul_li4{
+    font-weight: 100;
+    opacity: 0.6;
+    font-size: 15px;
+}
+.first-ul li:last-child{
+    color: #fff;
+}
+.all_tabs_s__sc_c{
+    margin-top: 10px;
+}
+@media screen and (max-width:768px){
+    .small_screen_none{
+        display: none;
+    }
+    .figureImage figcaption{
+        font-size: 14px;
+       
+    }
+    .first-ul li:last-child{
+        font-size: 11px;
+        margin-right: -51px;
+    }
+}
+@media screen and (min-width:768px){
+    .big_screen_none{
+        display: none;
+    }
 }

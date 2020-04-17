@@ -24,11 +24,18 @@
     margin: 0em 10px;
     padding: 10px 1px;
 }
+.middleArticle figure h6 {
+    font-weight: 700;
+    color: #242424;
+    font-size: 18px;
+    margin-top: 0;
+}
 .imageTitleMiddle{
     font-weight: 700;
     font-size: large;
     color: cornflowerblue;
 }
+
 @media screen and (max-width:768px){
     .middleSection{
         width: 100%;

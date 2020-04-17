@@ -19,7 +19,7 @@ class PartnerShip extends Component {
 
         return (
             <div className="parship_Box">
-                {pShipCheck !== "" ?
+                {pShipCheck !== "" && pShipCheck.hasOwnProperty("meta") ?
                     <>
                         <h5><span className="PartnershipTitle">Partnership</span></h5>
                         <ul className="ul_scorecard1">
@@ -61,26 +61,9 @@ class PartnerShip extends Component {
                                         <td>{item.secondBatsman.name}</td>
                                     </tr>
                                 ))}
-
-                                {/* <tr>
-                                    <td>Alvin</td>
-                                    <td>
-                                        <span className="p_1_span">23</span>
-                                        <div className="progress first_bar">
-                                            <div className="determinate" style={style} ></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span className="p_2_span">23</span>
-                                        <div className="progress sec_bar">
-                                            <div className="determinate" style={style} ></div>
-                                        </div>
-                                    </td>
-                                    <td>$0.87</td>
-                                </tr> */}
                             </tbody>
                         </table>
-                    </> : "Loading..."}
+                    </> : ""}
             </div>
         )
     }

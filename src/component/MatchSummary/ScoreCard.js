@@ -34,7 +34,7 @@ class ScoreCard extends Component {
         console.log(this.props.seriesId, this.props.matchId)
         console.log(this.props.scoreCardFromReducer)
         var score = this.props.scoreCardFromReducer;
-        if (score !== "") {
+        if (score !== "" && typeof showFullScoreCard !== "undefined") {
             var showFullScoreCard = this.props.scoreCardFromReducer.fullScorecard
             if (score !== "") {
                 var showFullScoreCard = this.props.scoreCardFromReducer.fullScorecard
@@ -59,7 +59,7 @@ class ScoreCard extends Component {
         console.log(SecondInnBat);
         return (
             <section>
-                {score !== "" ? <article>
+                {score !== "" && typeof showFullScoreCard !== "undefined" ? <article>
                     <article>
                         <ul className="ul_scorecard1">
                             <li onClick={this.firstButtonActive.bind(this)}><button className={this.state.firstButton ? "waves-effect waves-light btn active" : "waves-effect waves-light btn"}>{score !== "" ? showFullScoreCard.innings[0].team.shortName : ""}</button></li>
@@ -206,7 +206,7 @@ class ScoreCard extends Component {
                             </table>
                         </article>
                         : ""}
-                </article> : "Loading..."}
+                </article> : <h5>No Score card Yet.</h5>}
                 {/* <h1>ScoreCard</h1> */}
             </section>
         )

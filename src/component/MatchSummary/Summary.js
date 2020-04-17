@@ -26,75 +26,70 @@ class Summary extends Component {
         return (
             <section>
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
-                    {inSummary !== "" ? <PartnerShip sId={this.props.seriesIdSummary} mId={this.props.matchId} firstIn={showInSummary.innings[0].shortName} secondIn={showInSummary.innings[1].shortName} /> : "Loading..."}
+                    {inSummary !== "" ? <PartnerShip sId={this.props.seriesIdSummary} mId={this.props.matchId} firstIn={showInSummary.innings.hasOwnProperty("shortName") ? showInSummary.innings[0].shortName : ""} secondIn={showInSummary.innings.hasOwnProperty("shortName") ? showInSummary.innings[1].shortName : ""} /> : "Loading..."}
                 </article>
                 {/* <article className="articleTable hoverable animated bounceInLeft delay-1s">
                     <header>{inSummary !== "" ? showInSummary.tossMessage : ""}</header>
                 </article> */}
-                <article className="articleTable hoverable animated bounceInLeft delay-1s">
-                    <h5><span className="PartnershipTitle">Teams</span></h5>
-                    <table className="responsive-table highlight">
-                        <thead>
-                            <tr className="">
-                                <th></th>
-                                <th>Team</th>
-                                <th>Position</th>
-                                <th>Played</th>
-                                <th>Won</th>
-                                <th>Lost</th>
-                                <th>Draw</th>
-                                <th>Tied</th>
-                                <th>Points</th>
-                                <th>NRR</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {summaryPageShow !== "" && summaryPageShow.metaData.state !== "Upcoming" ? summaryPageShow.teams.map((item, index) => (
-                                <React.Fragment key={index}>
-                                    {group !== item.groupName && item.groupName.includes("Group") ? <tr className="">
-                                        <td colSpan="10" className="tdfull">{group = item.groupName}</td>
-                                    </tr> : ""}
+                {typeof showInSummary !== "undefined" && showInSummary.matchSummary.status !== "UPCOMING" ?
+                    <article className="articleTable hoverable animated bounceInLeft delay-1s">
+                        <h5><span className="PartnershipTitle">Teams</span></h5>
+                        <table className="responsive-table highlight">
+                            <thead>
+                                <tr className="">
+                                    <th></th>
+                                    <th>Team</th>
+                                    <th>Position</th>
+                                    <th>Played</th>
+                                    <th>Won</th>
+                                    <th>Lost</th>
+                                    <th>Draw</th>
+                                    <th>Tied</th>
+                                    <th>Points</th>
+                                    <th>NRR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {summaryPageShow !== "" && summaryPageShow.metaData.state !== "Upcoming" ? summaryPageShow.teams.map((item, index) => (
+                                    <React.Fragment key={index}>
+                                        {group !== item.groupName && item.groupName.includes("Group") ? <tr className="">
+                                            <td colSpan="10" className="tdfull">{group = item.groupName}</td>
+                                        </tr> : ""}
 
-                                    <tr className="">
-                                        <td><img src={item.logoUrl} className="hoverable" alt="" width="25px" /></td>
-                                        <td>{item.shortName}</td>
-                                        <td>{item.position}</td>
-                                        <td>{item.played}</td>
-                                        <td>{item.won}</td>
-                                        <td>{item.lost}</td>
-                                        <td>{item.drawn}</td>
-                                        <td>{item.tied}</td>
-                                        <td>{item.points}</td>
-                                        <td>{item.netRunRate}</td>
-                                    </tr>
-                                </React.Fragment>
-                            )) : <tr><td colSpan="10" className="upcomingmatchsummary">Upcoming Match...</td></tr>
-                            }
-                        </tbody>
-                    </table>
-                    <div>
-                        <ul className="statusSumm">
-                            <li>{summaryPageShow !== "" ? summaryPageShow.metaData.status : ""}</li>
-                            <li>{summaryPageShow !== "" ? summaryPageShow.metaData.series : ""}</li>
-                        </ul>
-                    </div>
-                </article>
-
+                                        <tr className="">
+                                            <td><img src={item.logoUrl} className="hoverable" alt="" width="25px" /></td>
+                                            <td>{item.shortName}</td>
+                                            <td>{item.position}</td>
+                                            <td>{item.played}</td>
+                                            <td>{item.won}</td>
+                                            <td>{item.lost}</td>
+                                            <td>{item.drawn}</td>
+                                            <td>{item.tied}</td>
+                                            <td>{item.points}</td>
+                                            <td>{item.netRunRate}</td>
+                                        </tr>
+                                    </React.Fragment>
+                                )) : <tr><td colSpan="10" className="upcomingmatchsummary">Upcoming Match...</td></tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div>
+                            <ul className="statusSumm">
+                                <li>{summaryPageShow !== "" ? summaryPageShow.metaData.status : ""}</li>
+                                <li>{summaryPageShow !== "" ? summaryPageShow.metaData.series : ""}</li>
+                            </ul>
+                        </div>
+                    </article>
+                    : ""}
 
 
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
                     <header className="seriesName"><span>{summaryPageShow !== "" ? summaryPageShow.metaData.series : ""}</span></header>
-
                     <div className="row">
                         {seriesTeamNames !== "" ? seriesTeamNames.seriesTeams.teams.map((item, index) => (
-
-                            <div className="col l4 s6" key={index}>
-                                <article >
-                                    <figure className="summaryFig">
-                                        <img src={item.logoUrl} alt="" />
-                                        <figcaption>{item.name}</figcaption>
-                                    </figure>
-                                </article>
+                            <div className="col l4 s6 logos_teams_summary" key={index}>
+                                <img src={item.logoUrl} alt="logo" />
+                                <h6>{item.name}</h6>
                             </div>
                         )) : ""
                         }

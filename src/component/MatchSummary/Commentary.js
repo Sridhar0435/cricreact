@@ -33,8 +33,8 @@ class Commentary extends Component {
 
         console.log("commFromState")
         var stateCommentary = this.props.commFromState;
-        if (stateCommentary !== "") {
-            var commentaryShow = this.props.commFromState.commentary.innings;
+        if (stateCommentary !== "" && stateCommentary.hasOwnProperty("commentary")) {
+            var commentaryShow = stateCommentary.commentary.innings;
             console.log(commentaryShow)
             if (this.state.first) {
                 var firstMatchComm = commentaryShow[0].overs.map((item, index) => {
@@ -58,7 +58,7 @@ class Commentary extends Component {
 
         return (
             <section >
-                {stateCommentary !== "" ?
+                {stateCommentary !== "" && stateCommentary.hasOwnProperty("commentary") ?
                     <article className="articleCommentary ">
 
                         <div className="row rowFilter">
@@ -97,9 +97,9 @@ class Commentary extends Component {
 
 
                                     </React.Fragment>
-                                )) : <img src={gif} width="300px" alt="" />}
+                                )) : "Loading..."}
                         </div>
-                    </article> : <img src={gif} width="300px" alt="" />}
+                    </article> : <h5>No Commentary Yet.</h5>}
             </section>
         )
     }

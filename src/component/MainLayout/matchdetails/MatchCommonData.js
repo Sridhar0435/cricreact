@@ -16,14 +16,8 @@ class MatchCommonData extends Component {
         this.props.MatchLiveHighL(this.props.seriesId, this.props.matchId); //matchliveapi
 
     }
-    componentDidUpdate() {
-
-
-    }
 
     render() {
-
-
         // let showMatchData = this.props.matchShowTime;
         let showMatchData = this.props.matchLiveDataComp;
         console.log("matchLiveDataComp")
@@ -39,7 +33,7 @@ class MatchCommonData extends Component {
         return (
             <>
                 {showMatchData !== "" ?
-                    <section className="">
+                    <section className="section_Match_Detials">
 
                         <article className="articleMatchDetails">
                             <article>
@@ -50,7 +44,7 @@ class MatchCommonData extends Component {
                                         <li>{showMatchData !== "" ? showDate : ""}</li>
                                     </ul>
                                     <div className="row">
-                                        <div className="col l4 s4 animated bounceIn">
+                                        <div className="col l4 s6 animated bounceIn">
                                             <article className="matchArt">
                                                 <figure className="figureImage">
                                                     <img src={showMatchData !== "" ? fullSummaryChaganedApi.homeTeam.logoUrl : ""} alt="" />
@@ -61,13 +55,26 @@ class MatchCommonData extends Component {
                                                 </div>
                                             </article>
                                         </div>
-                                        <div className="col l4 s4 animated bounceIn">
-                                            <figure className="figureImageLogo">
-                                                <img src={showMatchData !== "" ? fullSummaryChaganedApi.series.shieldImageUrl : ""} alt="" width="300px" />
-                                                <figcaption>{showMatchData !== "" ? fullSummaryChaganedApi.currentMatchState : ""}</figcaption>
-                                            </figure>
-                                        </div>
-                                        <div className="col l4 s4 animated bounceIn">
+                                        {fullSummaryChaganedApi.status !== "UPCOMING" ?
+                                            <div className="col l4 s4 animated bounceIn small_screen_none">
+                                                <figure className="figureImageLogo">
+                                                    <img src={showMatchData !== "" ? fullSummaryChaganedApi.series.shieldImageUrl : ""} alt="" width="300px" />
+                                                    <figcaption>{showMatchData !== "" ? fullSummaryChaganedApi.currentMatchState : ""}</figcaption>
+                                                </figure>
+                                            </div>
+                                            :
+                                            <div className="col l4 s4  animated bounceIn small_screen_none">
+                                                <ul className="summary_If_Up_ul">
+                                                    <li className="summary_If_Up_ul_li1">{fullSummaryChaganedApi.name}</li>
+                                                    <li className="summary_If_Up_ul_li2">{fullSummaryChaganedApi.localStartDate}</li>
+                                                    <li className="summary_If_Up_ul_li3">{fullSummaryChaganedApi.localStartTime}</li>
+                                                    <li className="summary_If_Up_ul_li4">{fullSummaryChaganedApi.venue.name}</li>
+                                                    <li className="summary_If_Up_ul_li5">{fullSummaryChaganedApi.series.name}</li>
+                                                </ul>
+                                            </div>
+                                        }
+
+                                        <div className="col l4 s6 animated bounceIn">
                                             <article className="matchArt">
                                                 <div className="scoreLable">
                                                     <span className="wicketScore">{showMatchData !== "" && typeof fullSummaryChaganedApi.scores !== "undefined" ? fullSummaryChaganedApi.scores.awayScore : ""}</span> <br /> <span className="Ovrs">{showMatchData !== "" && typeof fullSummaryChaganedApi.scores !== "undefined" ? "(" + fullSummaryChaganedApi.scores.awayOvers + "Ovrs)" : ""} </span>
@@ -79,9 +86,29 @@ class MatchCommonData extends Component {
                                             </article>
                                         </div>
                                     </div>
+                                    <div className="row">
+                                        {fullSummaryChaganedApi.status !== "UPCOMING" ?
+                                            <div className="col s12 animated bounceIn big_screen_none">
+                                                <figure className="figureImageLogo">
+                                                    <img src={showMatchData !== "" ? fullSummaryChaganedApi.series.shieldImageUrl : ""} alt="" width="300px" />
+                                                    <figcaption>{showMatchData !== "" ? fullSummaryChaganedApi.currentMatchState : ""}</figcaption>
+                                                </figure>
+                                            </div>
+                                            :
+                                            <div className="col s12 animated bounceIn big_screen_none">
+                                                <ul className="summary_If_Up_ul">
+                                                    <li className="summary_If_Up_ul_li1">Match 1</li>
+                                                    <li className="summary_If_Up_ul_li2">03 Jul 2020</li>
+                                                    <li className="summary_If_Up_ul_li3">06:30 PM</li>
+                                                    <li className="summary_If_Up_ul_li4">Kardinia Park, Geelong</li>
+                                                    <li className="summary_If_Up_ul_li5">ICC Men's T20 World Cup 2020</li>
+                                                </ul>
+                                            </div>
+                                        }
+                                    </div>
                                 </div>
                             </article>
-                            <article>
+                            <article className="all_tabs_s__sc_c">
                                 <ul className="tabs tabs-fixed-width tab-demo z-depth-1 ul_tab_links">
                                     <li className="tab" onClick={() => this.props.summary("GET_SUMMARY", this.props.seriesId, this.props.matchId)}><a className={this.props.displaySum ? "active" : "flow-text"}>Summary</a></li>
                                     <li className="tab" onClick={() => this.props.summary("GET_SCORE_CARD", this.props.seriesId, this.props.matchId)}><a className={this.props.scoreTabState ? "active" : ""}>Score card</a></li>
@@ -102,10 +129,10 @@ class MatchCommonData extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        matchShowTime: state.matchDetail.matchData,// replaced this with matchdetail api and used in this page 
+        matchShowTime: state.matchDetail.matchData,// replaced this with matchdetail api and used in this page
         displaySum: state.matchDetail.displaySummary,
         makeActive: state.matchDetail.tabActive,
-        matchLiveDataComp: state.matchDetail.matchLiveData, //matchdetail api 
+        matchLiveDataComp: state.matchDetail.matchLiveData, //matchdetail api
         scoreTabState: state.matchDetail.displayScoreCard,
         commentaryTabState: state.matchDetail.displayCommentary,
         statisticsTabState: state.matchDetail.displayStatistics,

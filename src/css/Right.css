@@ -45,6 +45,7 @@
 .imageTitleMiddle{
     cursor: pointer;
 }
+
 @media screen and (max-width: 768px){
     .rightSection{
       width: 100%;
