@@ -27,10 +27,10 @@ class FooterContent extends Component {
                         <div className="col l4  s12">
                             <h5 className="white-text"><span className="foot-title-head">Follow Us</span></h5>
                             <ul>
-                                <li><Link className="grey-text text-lighten-3" to={`/`}>Facebook</Link></li>
-                                <li><Link className="grey-text text-lighten-3" to={`/`}>Instagram</Link></li>
-                                <li><Link className="grey-text text-lighten-3" to={`/`}>LinkedIn</Link></li>
-                                <li><Link className="grey-text text-lighten-3" to={`/`}>Twitter</Link></li>
+                                <li><a className="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b/">Facebook</a></li>
+                                <li><a className="grey-text text-lighten-3" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b">LinkedIn</a></li>
+                                <li><a className="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/sridhar_achini/">Instagram</a></li>
+                                <li><a className="grey-text text-lighten-3" target="_blank" href="">Twitter</a></li>
                             </ul>
                         </div>
                     </div>

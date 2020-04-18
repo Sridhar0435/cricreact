@@ -26,7 +26,7 @@ class Summary extends Component {
         return (
             <section>
                 <article className="articleTable hoverable animated bounceInLeft delay-1s">
-                    {inSummary !== "" ? <PartnerShip sId={this.props.seriesIdSummary} mId={this.props.matchId} firstIn={showInSummary.innings.hasOwnProperty("shortName") ? showInSummary.innings[0].shortName : ""} secondIn={showInSummary.innings.hasOwnProperty("shortName") ? showInSummary.innings[1].shortName : ""} /> : "Loading..."}
+                    {inSummary !== "" ? <PartnerShip sId={this.props.seriesIdSummary} mId={this.props.matchId} firstIn={showInSummary.innings.length > 0 ? showInSummary.innings[0].shortName : ""} secondIn={showInSummary.innings.length > 0 ? showInSummary.innings[1].shortName : ""} /> : "Loading..."}
                 </article>
                 {/* <article className="articleTable hoverable animated bounceInLeft delay-1s">
                     <header>{inSummary !== "" ? showInSummary.tossMessage : ""}</header>

@@ -14,15 +14,39 @@
     margin-left: 0;
     border: 1px solid #e6e6e6;
 }
-.seriesBox{
+.seriesBox .card-panel{
     cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.seriesBox .card-panel:hover{
+    transform: scale(1.02,1.02);
+}
+.seriesBox .card-panel::after{
+    content: "";
+    background: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;  
 }
 
 .card-content.boxcolor{
     color: #fff;
 }
 .card-content.boxcolor:hover{
-    color: #333;
+    /* color: #333; */
+    color: #fff;
 }
 .tdTeamLogo{
     width: 25px;
@@ -36,7 +60,7 @@
     float: right;
 } */
 .card-panel.lighten-2.z-depth-2{
-    background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%);
+    /* background-image: linear-gradient(to bottom,#6cd297 -5%,#08b284 101%); */
     /* background: #424242; */
 }
 /* .card-panel.lighten-2.z-depth-2:hover{

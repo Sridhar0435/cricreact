@@ -30,15 +30,62 @@
     background: #f2f2f2!important;
     color: #333!important;
 }
-/* #liveMain{
-    height: 100vh;
-    background: #000;
+.liveScoreUpcoming .card-panel, .liveScoreCompleted .card-panel, .liveScoreLive .card-panel{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #000;
 }
-#completedLivescore{
-    height: 100vh;
-    background: lightcoral;
+.liveScoreUpcoming .card-panel::after{
+    content: "";
+    background: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;  
 }
-#upcomingLivescore{
-    height: 100vh;
-    background: greenyellow;
-} */
+.liveScoreCompleted .card-panel::after{
+    content: "";
+    background: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;  
+}
+.liveScoreLive .card-panel::after{
+    content: "";
+    background: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;  
+}
+.liveScoreUpcoming .card-panel:hover{
+    transform: scale(1.02,1.02);
+}
+.liveScoreCompleted .card-panel:hover{
+    transform: scale(1.02,1.02);
+}
+.liveScoreLive .card-panel:hover{
+    transform: scale(1.02,1.02);
+}

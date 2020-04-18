@@ -14,7 +14,7 @@
     opacity: 0.5;
 } */
 
-.divmatchMain{
+/* .divmatchMain{
     display: block;
     position: relative;
     width: 100%;
@@ -23,13 +23,10 @@
 }
 .divmatchMain::after {
     content: "";
-    /* background-image: url("https://www.cricket.com.au/-/media/Logos/Series/2020/series-WT20.ash"); */
-    /* background-image: url("https://wallpaperset.com/w/full/c/4/2/239958.jpg"); */
     background-image: url("https://resources.platform.bcci.tv/photo-resources/bcci/photo/2019/11/24/4d61fa4c-4652-4580-bace-13b92f308392/A70I4932.jpg?width=1000&height=625");
     background-size: cover;
     overflow: hidden;
     background-position: center;
-    /* opacity: 0.2; */
     opacity: 1;
     top: 0;
     left: 0;
@@ -37,15 +34,14 @@
     right: 0;
     position: absolute;
     z-index: -2;  
-    /* filter: brightness(164%);
-    -webkit-filter: brightness(164%); */
+    
     filter: blur(3px);
     box-shadow: inset 0px 0px 135px black;
-}
+} */
 .divmatchMain .first-ul{
     display: flex;
     justify-content: space-evenly;
-    font-size: 1.2vw;
+    font-size: 16px;
     color: #333;
     font-weight: 600;
 }
@@ -86,17 +82,17 @@
 .figureImage figcaption{
     font-size: 18px;
     font-weight: bolder;
-    color: #fff;
+    color: #242424;
 }
 .figureImageLogo{
     text-align: center;
     margin-top: 0;
 }
 .figureImageLogo img{
-    width: 9vw;
+    width:103px;
 }
 .figureImageLogo figcaption{
-    font-size: 1.2vw;
+    font-size: 14px;
     color: #333;
     font-weight: 600;
 }
@@ -125,7 +121,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 18px;
-    color: #fff;
+    color: #242424;
 }
 .summary_If_Up_ul_li2{
     font-size: 25px;
@@ -139,7 +135,7 @@
     font-size: 15px;
 }
 .first-ul li:last-child{
-    color: #fff;
+    color: #242424;
 }
 .all_tabs_s__sc_c{
     margin-top: 10px;
@@ -152,9 +148,29 @@
         font-size: 14px;
        
     }
+    .first-ul{
+        font-size: 13px!important;
+        flex-direction: column-reverse;
+    }
+    
     .first-ul li:last-child{
         font-size: 11px;
         margin-right: -51px;
+    }
+    .figureImage{
+        margin: 0;
+    }
+    .scoreLable{
+        font-size: 12px;
+    }
+    .matchArt_1{
+        flex-flow: column;
+    }
+    .matchArt_2{
+        flex-flow: column-reverse;
+    }
+    .xs-m{
+        margin-top: -40px;
     }
 }
 @media screen and (min-width:768px){

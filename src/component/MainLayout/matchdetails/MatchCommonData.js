@@ -45,7 +45,7 @@ class MatchCommonData extends Component {
                                     </ul>
                                     <div className="row">
                                         <div className="col l4 s6 animated bounceIn">
-                                            <article className="matchArt">
+                                            <article className="matchArt matchArt_1">
                                                 <figure className="figureImage">
                                                     <img src={showMatchData !== "" ? fullSummaryChaganedApi.homeTeam.logoUrl : ""} alt="" />
                                                     <figcaption>{showMatchData !== "" ? fullSummaryChaganedApi.homeTeam.name : ""}</figcaption>
@@ -75,7 +75,7 @@ class MatchCommonData extends Component {
                                         }
 
                                         <div className="col l4 s6 animated bounceIn">
-                                            <article className="matchArt">
+                                            <article className="matchArt matchArt_2">
                                                 <div className="scoreLable">
                                                     <span className="wicketScore">{showMatchData !== "" && typeof fullSummaryChaganedApi.scores !== "undefined" ? fullSummaryChaganedApi.scores.awayScore : ""}</span> <br /> <span className="Ovrs">{showMatchData !== "" && typeof fullSummaryChaganedApi.scores !== "undefined" ? "(" + fullSummaryChaganedApi.scores.awayOvers + "Ovrs)" : ""} </span>
                                                 </div>
@@ -86,7 +86,7 @@ class MatchCommonData extends Component {
                                             </article>
                                         </div>
                                     </div>
-                                    <div className="row">
+                                    <div className="row xs-m">
                                         {fullSummaryChaganedApi.status !== "UPCOMING" ?
                                             <div className="col s12 animated bounceIn big_screen_none">
                                                 <figure className="figureImageLogo">
@@ -97,11 +97,11 @@ class MatchCommonData extends Component {
                                             :
                                             <div className="col s12 animated bounceIn big_screen_none">
                                                 <ul className="summary_If_Up_ul">
-                                                    <li className="summary_If_Up_ul_li1">Match 1</li>
-                                                    <li className="summary_If_Up_ul_li2">03 Jul 2020</li>
-                                                    <li className="summary_If_Up_ul_li3">06:30 PM</li>
-                                                    <li className="summary_If_Up_ul_li4">Kardinia Park, Geelong</li>
-                                                    <li className="summary_If_Up_ul_li5">ICC Men's T20 World Cup 2020</li>
+                                                    <li className="summary_If_Up_ul_li1">{fullSummaryChaganedApi.name}</li>
+                                                    <li className="summary_If_Up_ul_li2">{fullSummaryChaganedApi.localStartDate}</li>
+                                                    <li className="summary_If_Up_ul_li3">{fullSummaryChaganedApi.localStartTime}</li>
+                                                    <li className="summary_If_Up_ul_li4">{fullSummaryChaganedApi.venue.name}</li>
+                                                    <li className="summary_If_Up_ul_li5">{fullSummaryChaganedApi.series.name}</li>
                                                 </ul>
                                             </div>
                                         }

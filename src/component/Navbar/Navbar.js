@@ -6,6 +6,8 @@ import AllMatch from "../AllMatches";
 import { connect } from "react-redux";
 import logo from "../../images/logo150px.png";
 import title150x50 from "../../images/title150x50.png";
+import Tippy from "@tippy.js/react";
+import "tippy.js/dist/tippy.css";
 class Navbar extends Component {
 
     render() {
@@ -51,9 +53,23 @@ class Navbar extends Component {
                             {/* <li className="li-mainNav "><Link className="titlink" to="/allmatch">Features</Link></li>
                             <li className="li-mainNav "><Link className="titlink" to="/allmatch">Stats</Link></li> */}
                             {/* <li className="li-mainNav "><Link className="titlink" to="/allmatch">Ranking</Link></li> */}
-                            <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li className="li-mainNav"><a className="titlink" target="_blank" href="https://www.instagram.com/sridhar_achini/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                            <li className="li-mainNav">
+                                <Tippy placement="left" content="Facebook">
+                                    <a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b/"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                                </Tippy>
+                            </li>
+
+                            <li className="li-mainNav">
+                                <Tippy placement="left" content="LinkedIn">
+                                    <a className="titlink" target="_blank" href="https://www.linkedin.com/in/sridhar-achini-8665a015b"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+                                </Tippy>
+                            </li>
+                            <li className="li-mainNav">
+                                <Tippy placement="right" content="Instgram">
+                                    <a className="titlink" target="_blank" href="https://www.instagram.com/sridhar_achini/"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                                </Tippy>
+                            </li>
                         </ul>
                     </div>
                 </nav>
