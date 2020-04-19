@@ -37,7 +37,7 @@ class ShowMoreTest extends Component {
         console.log("hello")
         console.log(stateCommentary)
 
-        var height = 500
+        var height = 450
         return (
             <div>
                 <List
