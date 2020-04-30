@@ -3,6 +3,7 @@ import "../../css/SeriesView.css";
 import Left from "./Left";
 import Right from "./Right";
 import SeriesViewChild from "./SeriesViewChild";
+import Tweets from "../Tweets";
 class SeriesView extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +21,8 @@ class SeriesView extends Component {
             <div className="parentMiddleBox">
                 <Left id={this.props.match.params.id} />
                 <SeriesViewChild id={this.props.match.params.id} />
-                <Right />
+                {/* <Right /> */}
+                <Tweets />
             </div>
         )
     }

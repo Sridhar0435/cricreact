@@ -4,6 +4,7 @@ import "../../css/Serices.css";
 import Left from "./Left";
 import Middle from "./Middle";
 import Right from "./Right";
+import Tweets from "../Tweets";
 import SeriesView from "./SeriesView";
 import { connect } from "react-redux";
 import { myAction, getBySeriesId } from "../../actions/myAction";
@@ -16,7 +17,8 @@ class Serices extends Component {
             <div className="parentMiddleBox">
                 <Left />
                 <Middle />
-                <Right />
+                {/* <Right /> */}
+                <Tweets />
             </div>
         )
     }

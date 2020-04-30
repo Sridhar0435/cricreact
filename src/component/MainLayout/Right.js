@@ -25,8 +25,8 @@ class Right extends Component {
             <>
                 {headlineCheck !== "" ?
                     <section className="rightSection">
-
-                        <article className="rightArticle hoverable">
+                        {/* hoverable removed hover effect */}
+                        <article className="rightArticle ">
                             <div className="sericeContentRight">
                                 <header className="sericeHeader"><i className="fa fa-rss" aria-hidden="true"></i>  Trending</header>
                                 <ul>

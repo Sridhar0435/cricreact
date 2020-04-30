@@ -1,24 +1,38 @@
-.tweets_div{
-    height: 500px;
+.twitterContainer{
+    width: 300px;
+    height: 100vw;
     overflow-y: scroll;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    padding: 4px;
+    background: #fff;
 }
-.tweets_div::-webkit-scrollbar-track
+.twitterContainer::-webkit-scrollbar-track
 {
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
 }
-.tweets_div::-webkit-scrollbar
+.twitterContainer::-webkit-scrollbar
 {
-	width: 12px;
+	width: 4px;
 	background-color: #F5F5F5;
 }
-.tweets_div::-webkit-scrollbar-thumb
+.twitterContainer::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+	background-color: #fff4;
 }
-.timeline-TweetList-tweet{
-    color: red;
+.tweets_header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 11px;
+    background: #fff;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #6cd297;
 }

@@ -4,7 +4,10 @@ import "../../css/Left.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { myAction, getBySeriesId } from "../../actions/myAction";
+import Right from "./Right";
 import Tweets from "../Tweets";
+import Zoom from 'react-reveal/Zoom';
+import burger from "../../images/burger.png"
 class Left extends Component {
     constructor() {
         super();
@@ -32,9 +35,6 @@ class Left extends Component {
             toggle: !this.state.toggle
         })
     }
-    // ScrollOut({
-    //     /* options */
-    // })
 
     render() {
         // console.log("Left " + this.props.id)
@@ -43,25 +43,39 @@ class Left extends Component {
 
         return (
             <>
-                <div className="mainbox" onClick={this.slideShowToggle.bind(this)}><i className="fa fa-bars" aria-hidden="true"></i></div>
-                <section className={this.state.toggle ? "LeftSection dispWid animated fadeIn" : "LeftSection hideeWid animated fadeIn"}>
-                    <a className="closeBtn" onClick={this.closeBtn.bind(this)}>x</a>
-                    <article className="leftArticle hoverable">
-                        <div className="serieContent">
-                            {AllMatchSeries.length > 0 ?
-                                <>
-                                    <header className="sericeHeader">Series Details</header>
-                                    <ul>
-                                        <li>IPL 2020</li>
-                                        {AllMatchSeries.map((item, index) => (
-                                            // <li onClick={() => this.props.seriesData(item.id)} key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
-                                            <li key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
-                                        ))}
-                                    </ul>
-                                </> : ""}
-                        </div>
-                    </article>
-                    {/* <article className="leftArticle hoverable">
+                {/* <div className="mainbox" onClick={this.slideShowToggle.bind(this)}><i className="fa fa-bars" aria-hidden="true"></i></div> */}
+                <span className="in_burger"> <img src={burger} className="burger" alt="" /></span>
+                <span className="mainbox" onClick={this.slideShowToggle.bind(this)}>
+
+
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
+
+
+                </span>
+                <Zoom left>
+                    <section className={this.state.toggle ? "LeftSection dispWid animated fadeIn" : "LeftSection hideeWid animated fadeIn"}>
+                        <a className="closeBtn" onClick={this.closeBtn.bind(this)}>x</a>
+                        {/* hoverable removed hover effect */}
+                        <article className="leftArticle ">
+                            <div className="serieContent">
+                                {AllMatchSeries.length > 0 ?
+                                    <>
+                                        <header className="sericeHeader">Series Details</header>
+                                        <Zoom left cascade>
+                                            <ul>
+                                                <li>IPL 2020</li>
+                                                {AllMatchSeries.map((item, index) => (
+                                                    // <li onClick={() => this.props.seriesData(item.id)} key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
+                                                    <li key={index}><Link to={`/seriesview/${item.id}`}>{item.name.replace(/2020/g, '')}</Link></li>
+                                                ))}
+                                            </ul>
+                                        </Zoom>
+                                    </> : ""}
+                            </div>
+                        </article>
+                        {/* <article className="leftArticle hoverable">
                     <div className="serieContent">
                         <header className="sericeHeader">Follow Us</header>
                         <ul>
@@ -80,9 +94,11 @@ class Left extends Component {
                         </ul>
                     </div>
                 </article> */}
-                    <Tweets />
-
-                </section >
+                        <Zoom left cascade>
+                            <Right />
+                        </Zoom>
+                    </section >
+                </Zoom>
             </>
         )
     }

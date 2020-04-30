@@ -3,6 +3,7 @@ import "../../css/Middle.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { newsApiAction } from "../../actions/myAction";
+import Zoom from 'react-reveal/Zoom';
 class Middle extends Component {
     constructor() {
         super();
@@ -26,17 +27,19 @@ class Middle extends Component {
             <section className="middleSection">
                 {news !== "" ?
                     newsAppend.reverse().map((item, index) => (
-
-                        <article className="middleArticle hoverable" key={index} >
-                            <figure>
-                                <h6>{item.title}</h6>
-                                <img src={item.urlToImage} alt="" />
-                                <figcaption>
-                                    <h5 className="imageTitleMiddle" onClick={(e) => this.redirection(e, item.url)}>{item.description}</h5>
-                                    {/* <p>{item.content}</p> */}
-                                </figcaption>
-                            </figure>
-                        </article>
+                        //hoverable remove hover box-shadow
+                        <Zoom left cascade>
+                            <article className="middleArticle " key={index} >
+                                <figure>
+                                    <h6>{item.title}</h6>
+                                    <img src={item.urlToImage} alt="" />
+                                    <figcaption>
+                                        <h5 className="imageTitleMiddle" onClick={(e) => this.redirection(e, item.url)}>{item.description}</h5>
+                                        {/* <p>{item.content}</p> */}
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </Zoom>
                     ))
                     : ""}
                 {/* <article className="middleArticle hoverable">

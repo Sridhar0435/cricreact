@@ -28,7 +28,8 @@ body{
 }
 .sericeHeader{
     border-bottom: 1px dotted gray;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
     /* color: lightcoral; */
     color: #6cd297;
     font-weight: 600;
@@ -45,15 +46,21 @@ body{
 .serieContent ul li:last-child{
     border-bottom: 0;
 }
-.serieContent ul li:hover{
-    background: lavender;
-    padding: 0px 10px;
-    transition: .4s ease;
-    border-radius: 4px;
+.serieContent ul li:hover a{
+    /* background: lavender; */
+    /* padding: 0px 10px; */
+    color: cornflowerblue;
+    /* border-radius: 4px; */
 }
 .mainbox{
     cursor: pointer;
     font-size: 20px;
+    position: absolute;
+    top: 112.1px;
+    z-index: 1;
+    left: 3px;
+    opacity: 0.7px;
+    display: none;
 }
 .mainbox, .closeBtn{
     display: none;
@@ -61,7 +68,9 @@ body{
 [data-scroll] {
     transition: all 2s;
 }
-
+.in_burger{
+    display: none;
+}
 @media screen and (max-width:800px){
     .LeftSection{
         position: absolute;
@@ -70,28 +79,32 @@ body{
         z-index: 1;
         /* max-width: 280px; */
         /* padding: 6px 13px; */
-       width: 0;
+       /* width: 0; */
        overflow-x: hidden;
        padding: 0;
        transition: all .5s;
     }
     .leftArticle{
         border-radius: 0;
+        background: #f2f2f2;
+        border: 0;
     }
     .closeBtn{
         position: absolute;
-        top: 5px;
-        right: 25px;
-        font-size: 25px;
+        top: -2px;
+        right: 19px;
+        font-size: 30px;
         margin-left: 32px;
-        color: #6cd297;
+        color: silver;
     }
     .dispWid{
-        width: 280px !important;
+        /* width: 280px !important; */
+        left: 0;
         padding: 0 !important;
     }
     .hideeWid{
-        width: 0 !important;
+        /* width: 0 !important; */
+        left: -100%;
         padding: 0 !important;
     }
     .mainbox, .closeBtn{
@@ -108,9 +121,37 @@ body{
     .serieContent ul li {
         white-space: nowrap;
     }
+    
 }
 @media screen and (max-width:768px){
     .LeftSection{
-        /* display: none; */
+        background: #f2f2f2;
+        height: 100vh;
+        border-right: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        border-bottom-right-radius: 8px;
+        padding: 15px 13px;
+    }
+    .serieContent ul li a{
+        color: #333;
+    }
+    .line{
+        width: 17px;
+        height: 2px;
+        background: #fff;
+        margin-bottom: 3px;
+    }
+    .burger{
+        position: absolute;
+        width: 60px;
+        left: -22px;
+        top: -4px;
+        z-index: 1;
+    }
+    .in_burger{
+        display: initial;
+        position: absolute;
+        top: 61px;
+        left: -6px;
     }
 }
