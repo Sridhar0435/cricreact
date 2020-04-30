@@ -4,6 +4,7 @@ import "../../css/Left.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { myAction, getBySeriesId } from "../../actions/myAction";
+import Tweets from "../Tweets";
 class Left extends Component {
     constructor() {
         super();
@@ -13,11 +14,13 @@ class Left extends Component {
     }
     componentDidMount() {
         this.props.changeName();
+
     }
     componentDidUpdate(prevProps) {
         if (prevProps.id !== this.props.id) {
             this.props.seriesData(this.props.id);
         }
+
     }
     slideShowToggle() {
         this.setState({
@@ -77,13 +80,14 @@ class Left extends Component {
                         </ul>
                     </div>
                 </article> */}
+                    <Tweets />
+
                 </section >
             </>
         )
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         getAllMatDataFromRed: state.series.passAllMatDataFromReducer,
         getId: state.series.byId

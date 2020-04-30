@@ -20,7 +20,7 @@ class FooterContent extends Component {
                             <ul>
                                 <li><Link className="grey-text text-lighten-3" to={`/terms_and_conditions`}>Terms & Conditions</Link></li>
                                 <li><Link className="grey-text text-lighten-3" to={`/`}>Privacy Policy</Link></li>
-                                <li><Link className="grey-text text-lighten-3" to={`/about_us`}>About Us</Link></li>
+                                <li><a className="grey-text text-lighten-3" target="_blank" href="https://sridhar0435.github.io/bio/">About Us</a></li>
                                 <li><Link className="grey-text text-lighten-3" to={`/`}>Feedback</Link></li>
                             </ul>
                         </div>
@@ -41,6 +41,7 @@ class FooterContent extends Component {
                     </div>
                 </div>
                 {/* <Footer /> */}
+
             </footer>
         )
     }
