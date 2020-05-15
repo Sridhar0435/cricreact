@@ -4,8 +4,9 @@
     overflow-y: scroll;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
-    padding: 4px;
     background: #fff;
+    margin-bottom: 20px;
+    padding: 7px;
 }
 .twitterContainer::-webkit-scrollbar-track
 {
@@ -35,4 +36,11 @@
     font-weight: 600;
     line-height: 24px;
     color: #6cd297;
+}
+
+@media (max-width:768px){
+    .twitterContainer{
+        width: 347px;
+        margin: 4px 14px 16px 14px;
+    }
 }

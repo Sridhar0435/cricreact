@@ -26,7 +26,7 @@ class Navbar extends Component {
                             <li className="li-mainNav "><Link className="titlink" to="/livescore">Live Score</Link></li>
                             <li className="li-mainNav dropdown">
                                 <a className="titlink">Series <i className="fa fa-caret-down" aria-hidden="true"></i></a>
-                                <div className="sub_nav animated fadeIn">
+                                <div className="sub_nav ">
                                     <ul className="sub-ul-drop">
                                         {seriesList.length > 0 ? seriesList.map((item, index) => <li key={index} className="sub-li-drop">
                                             <Link className="sub-a-drop" to={`/seriesview/${item.id}`}> {item.name} </Link></li>) : ""}
@@ -35,7 +35,7 @@ class Navbar extends Component {
                             </li>
                             <li className="li-mainNav dropdown">
                                 <a className="titlink" to="" >Teams <i className="fa fa-caret-down" aria-hidden="true"></i></a>
-                                <div className="sub_nav animated fadeIn">
+                                <div className="sub_nav ">
                                     <ul className="sub-ul-drop">
                                         <li className="sub-li-drop"><Link to="/team/3/India" className="sub-a-drop" >India</Link></li>
                                         <li className="sub-li-drop"><Link to="/team/1/Australia" className="sub-a-drop" >Australia</Link></li>

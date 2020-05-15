@@ -40,4 +40,7 @@
     .middleSection{
         width: 100%;
     }
+    .middleArticle{
+        margin: 0px 0px 12px 14px;
+    }
 }

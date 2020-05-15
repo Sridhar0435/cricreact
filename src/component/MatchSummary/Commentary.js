@@ -3,6 +3,7 @@ import "../../css/Commentary.css"
 import gif from "../../images/loader.gif";
 import { connect } from "react-redux";
 import { commentaryAction } from "../../actions/matchDetailAction";
+import Bounce from 'react-reveal/Bounce';
 class Commentary extends Component {
     constructor() {
         super()
@@ -70,28 +71,34 @@ class Commentary extends Component {
                                 </select>
                             </div>
                         </div>
+
                         <div>
                             {stateCommentary !== "" ?
                                 firstMatchComm.map((item, index) => (
+
                                     <React.Fragment>
+
                                         {item.balls.map((subItem, index) => (
                                             <>
-                                                {subItem.comments.length > 1 ? <h5 className="oversum"> {subItem.comments[0].text}</h5> : ""}
-                                                {/* <h5 className="oversum">{subItem.comments.length > 1 ? subItem.comments[0].text : ""}</h5> */}
-                                                <div key={index} style={style} className="card-panel lighten-2 z-depth-2 hoverable commCard">
-                                                    <div className="card-content boxcolor">
-                                                        <div className="row hor_com">
-                                                            <div className="col l1 s2 com4w">
-                                                                <span className="span1_com4w">
-                                                                    {/* || subItem.comments[0].runs !== ""  */}
-                                                                    {subItem.result !== "" ? subItem.result : "."}
-                                                                    {subItem.comments[0].runs !== "" && subItem.comments[0].ballType == "Wide" ? <sup>Wd</sup> : ""}
-                                                                </span>
-                                                                <span className="span2_com4w">{item.overNum - 1 + "." + subItem.ballNumber}</span></div>
-                                                            <div className="col l11 s10 comContent">{subItem.comments.length > 1 ? subItem.comments[1].text : subItem.comments[0].text}</div>
+                                                <Bounce right cascade>
+                                                    {subItem.comments.length > 1 ? <h5 className="oversum"> {subItem.comments[0].text}</h5> : ""}
+                                                    {/* <h5 className="oversum">{subItem.comments.length > 1 ? subItem.comments[0].text : ""}</h5> */}
+
+                                                    <div key={index} style={style} className="card-panel lighten-2 z-depth-2 hoverable commCard">
+                                                        <div className="card-content boxcolor">
+                                                            <div className="row hor_com">
+                                                                <div className="col l1 s2 com4w">
+                                                                    <span className="span1_com4w">
+                                                                        {/* || subItem.comments[0].runs !== ""  */}
+                                                                        {subItem.result !== "" ? subItem.result : "."}
+                                                                        {subItem.comments[0].runs !== "" && subItem.comments[0].ballType == "Wide" ? <sup>Wd</sup> : ""}
+                                                                    </span>
+                                                                    <span className="span2_com4w">{item.overNum - 1 + "." + subItem.ballNumber}</span></div>
+                                                                <div className="col l11 s10 comContent">{subItem.comments.length > 1 ? subItem.comments[1].text : subItem.comments[0].text}</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </Bounce>
                                             </>
                                         ))}
 
@@ -99,6 +106,7 @@ class Commentary extends Component {
                                     </React.Fragment>
                                 )) : "Loading..."}
                         </div>
+
                     </article> : <h5>No Commentary Yet.</h5>}
             </section>
         )

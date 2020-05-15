@@ -25,7 +25,7 @@ const Tweets = () => {
         anchor.setAttribute("class", "twitter-timeline");
         anchor.setAttribute("data-theme", "light");
         // anchor.setAttribute("data-tweet-limit", "5");
-        anchor.setAttribute("data-width", "280");
+        anchor.setAttribute("data-width", "348");
         //   anchor.setAttribute("data-chrome", "noheader nofooter noborders");
         anchor.setAttribute("href", "https://twitter.com/ICC?ref_src=twsrc%5Etfw");
         document.getElementsByClassName("twitter-embed")[0].appendChild(anchor);

@@ -113,7 +113,7 @@ class MatchCommonData extends Component {
                                     <li className="tab" onClick={() => this.props.summary("GET_SUMMARY", this.props.seriesId, this.props.matchId)}><a className={this.props.displaySum ? "active" : "flow-text"}>Summary</a></li>
                                     <li className="tab" onClick={() => this.props.summary("GET_SCORE_CARD", this.props.seriesId, this.props.matchId)}><a className={this.props.scoreTabState ? "active" : ""}>Score card</a></li>
                                     <li className="tab" onClick={() => this.props.summary("GET_COMMENTARY", this.props.seriesId, this.props.matchId)}><a className={this.props.commentaryTabState ? "active" : ""}>Commentary</a></li>
-                                    <li className="tab" onClick={() => this.props.summary("GET_STATISTICS", this.props.seriesId)}><a className={this.props.statisticsTabState ? "active" : ""}>Statistics</a></li>
+                                    {/* <li className="tab" onClick={() => this.props.summary("GET_STATISTICS", this.props.seriesId)}><a className={this.props.statisticsTabState ? "active" : ""}>Statistics</a></li> */}
                                     {/* <li className="tab" onClick={() => this.props.summary("TABLE", this.props.seriesId)}><a className={this.props.tableTabState ? "active" : ""}>Table</a></li> */}
                                 </ul>
                             </article>
